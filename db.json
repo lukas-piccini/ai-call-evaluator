@@ -1,0 +1,3304 @@
+{
+ "calls": [
+   {
+  "call_id": "call_5f913cd6a076172f37d7e9f62eb",
+  "call_type": "web_call",
+  "agent_id": "agent_ae8993993d406d303d2b04b247",
+  "collected_dynamic_variables": {
+    "current_agent_state": "warm_intro"
+  },
+  "call_status": "ended",
+  "start_timestamp": 1749119190775,
+  "end_timestamp": 1749119215115,
+  "duration_ms": 24340,
+  "transcript": "Agent: Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?\nUser: Hey. Yes. You are. How are you doing?\nAgent: I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?\n",
+  "transcript_object": [
+    {
+      "role": "agent",
+      "content": "Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?",
+      "words": [
+        {
+          "word": "Hello, ",
+          "start": 0.797,
+          "end": 1.111
+        },
+        {
+          "word": "Sam.",
+          "start": 1.111,
+          "end": 1.61
+        },
+        {
+          "word": " This ",
+          "start": 1.655791748046875,
+          "end": 1.841791748046875
+        },
+        {
+          "word": "is ",
+          "start": 1.841791748046875,
+          "end": 1.957791748046875
+        },
+        {
+          "word": "Chloe ",
+          "start": 1.957791748046875,
+          "end": 2.317791748046875
+        },
+        {
+          "word": "from ",
+          "start": 2.317791748046875,
+          "end": 2.573791748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 2.573791748046875,
+          "end": 2.944791748046875
+        },
+        {
+          "word": "Real ",
+          "start": 2.944791748046875,
+          "end": 3.153791748046875
+        },
+        {
+          "word": "Estate ",
+          "start": 3.153791748046875,
+          "end": 3.467791748046875
+        },
+        {
+          "word": "company.",
+          "start": 3.467791748046875,
+          "end": 4.117791748046875
+        },
+        {
+          "word": " Am ",
+          "start": 4.163541748046875,
+          "end": 4.326541748046875
+        },
+        {
+          "word": "I ",
+          "start": 4.326541748046875,
+          "end": 4.407541748046875
+        },
+        {
+          "word": "catching ",
+          "start": 4.407541748046875,
+          "end": 4.697541748046875
+        },
+        {
+          "word": "you ",
+          "start": 4.697541748046875,
+          "end": 4.802541748046875
+        },
+        {
+          "word": "at ",
+          "start": 4.802541748046875,
+          "end": 4.883541748046875
+        },
+        {
+          "word": "a ",
+          "start": 4.883541748046875,
+          "end": 4.941541748046875
+        },
+        {
+          "word": "good ",
+          "start": 4.941541748046875,
+          "end": 5.081541748046875
+        },
+        {
+          "word": "time?",
+          "start": 5.081541748046875,
+          "end": 5.464541748046875
+        }
+      ],
+      "metadata": {
+        "response_id": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hey. Yes. You are. How are you doing?",
+      "words": [
+        {
+          "word": "Hey. ",
+          "start": 7.92,
+          "end": 8.4
+        },
+        {
+          "word": "Yes. ",
+          "start": 8.4,
+          "end": 8.64
+        },
+        {
+          "word": "You ",
+          "start": 8.64,
+          "end": 8.88
+        },
+        {
+          "word": "are. ",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "word": "How ",
+          "start": 9.2,
+          "end": 9.44
+        },
+        {
+          "word": "are ",
+          "start": 9.44,
+          "end": 9.6
+        },
+        {
+          "word": "you ",
+          "start": 9.6,
+          "end": 9.68
+        },
+        {
+          "word": "doing?",
+          "start": 9.68,
+          "end": 9.7599997
+        }
+      ]
+    },
+    {
+      "role": "agent",
+      "content": "I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?",
+      "words": [
+        {
+          "word": "I’m ",
+          "start": 11.264,
+          "end": 11.496
+        },
+        {
+          "word": "doing ",
+          "start": 11.496,
+          "end": 11.716
+        },
+        {
+          "word": "great, ",
+          "start": 11.716,
+          "end": 11.96
+        },
+        {
+          "word": "thanks ",
+          "start": 11.96,
+          "end": 12.251
+        },
+        {
+          "word": "for ",
+          "start": 12.251,
+          "end": 12.401
+        },
+        {
+          "word": "asking!",
+          "start": 12.401,
+          "end": 13.04
+        },
+        {
+          "word": " I’m ",
+          "start": 13.086041748046876,
+          "end": 13.353041748046875
+        },
+        {
+          "word": "reaching ",
+          "start": 13.353041748046875,
+          "end": 13.644041748046876
+        },
+        {
+          "word": "out ",
+          "start": 13.644041748046876,
+          "end": 13.806041748046875
+        },
+        {
+          "word": "because ",
+          "start": 13.806041748046875,
+          "end": 14.050041748046874
+        },
+        {
+          "word": "you ",
+          "start": 14.050041748046874,
+          "end": 14.189041748046876
+        },
+        {
+          "word": "recently ",
+          "start": 14.189041748046876,
+          "end": 14.607041748046875
+        },
+        {
+          "word": "showed ",
+          "start": 14.607041748046875,
+          "end": 14.863041748046875
+        },
+        {
+          "word": "interest ",
+          "start": 14.863041748046875,
+          "end": 15.258041748046875
+        },
+        {
+          "word": "in ",
+          "start": 15.258041748046875,
+          "end": 15.397041748046876
+        },
+        {
+          "word": "524 ",
+          "start": 15.397041748046876,
+          "end": 15.699041748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 15.699041748046875,
+          "end": 16.035041748046876
+        },
+        {
+          "word": "Lane ",
+          "start": 16.035041748046876,
+          "end": 16.186041748046875
+        },
+        {
+          "word": "in ",
+          "start": 16.186041748046875,
+          "end": 16.500041748046876
+        },
+        {
+          "word": "Palo ",
+          "start": 16.500041748046876,
+          "end": 16.836041748046874
+        },
+        {
+          "word": "Alto, ",
+          "start": 16.836041748046874,
+          "end": 17.301041748046874
+        },
+        {
+          "word": "near ",
+          "start": 17.301041748046874,
+          "end": 17.614041748046876
+        },
+        {
+          "word": "Stanford.",
+          "start": 17.614041748046876,
+          "end": 17.754041748046873
+        },
+        {
+          "word": " I ",
+          "start": 19.541208251953126,
+          "end": 19.646208251953126
+        },
+        {
+          "word": "wanted ",
+          "start": 19.646208251953126,
+          "end": 19.843208251953126
+        },
+        {
+          "word": "to ",
+          "start": 19.843208251953126,
+          "end": 19.913208251953126
+        },
+        {
+          "word": "see ",
+          "start": 19.913208251953126,
+          "end": 20.041208251953126
+        },
+        {
+          "word": "how ",
+          "start": 20.041208251953126,
+          "end": 20.168208251953125
+        },
+        {
+          "word": "I ",
+          "start": 20.168208251953125,
+          "end": 20.238208251953125
+        },
+        {
+          "word": "can ",
+          "start": 20.238208251953125,
+          "end": 20.366208251953125
+        },
+        {
+          "word": "help ",
+          "start": 20.366208251953125,
+          "end": 20.563208251953125
+        },
+        {
+          "word": "you ",
+          "start": 20.563208251953125,
+          "end": 20.702208251953124
+        },
+        {
+          "word": "further.",
+          "start": 20.702208251953124,
+          "end": 21.306208251953127
+        },
+        {
+          "word": " What ",
+          "start": 21.329375,
+          "end": 21.515375
+        },
+        {
+          "word": "are ",
+          "start": 21.515375,
+          "end": 21.619375
+        },
+        {
+          "word": "your ",
+          "start": 21.619375,
+          "end": 21.747375
+        },
+        {
+          "word": "thoughts ",
+          "start": 21.747375,
+          "end": 22.026375
+        },
+        {
+          "word": "on ",
+          "start": 22.026375,
+          "end": 22.130375
+        },
+        {
+          "word": "the ",
+          "start": 22.130375,
+          "end": 22.223375
+        },
+        {
+          "word": "property ",
+          "start": 22.223375,
+          "end": 22.630375
+        },
+        {
+          "word": "so ",
+          "start": 22.630375,
+          "end": 22.804375
+        },
+        {
+          "word": "far?",
+          "start": 22.804375,
+          "end": 23.256375
+        }
+      ],
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "transcript_with_tool_calls": [
+    {
+      "role": "agent",
+      "content": "Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?",
+      "words": [
+        {
+          "word": "Hello, ",
+          "start": 0.797,
+          "end": 1.111
+        },
+        {
+          "word": "Sam.",
+          "start": 1.111,
+          "end": 1.61
+        },
+        {
+          "word": " This ",
+          "start": 1.655791748046875,
+          "end": 1.841791748046875
+        },
+        {
+          "word": "is ",
+          "start": 1.841791748046875,
+          "end": 1.957791748046875
+        },
+        {
+          "word": "Chloe ",
+          "start": 1.957791748046875,
+          "end": 2.317791748046875
+        },
+        {
+          "word": "from ",
+          "start": 2.317791748046875,
+          "end": 2.573791748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 2.573791748046875,
+          "end": 2.944791748046875
+        },
+        {
+          "word": "Real ",
+          "start": 2.944791748046875,
+          "end": 3.153791748046875
+        },
+        {
+          "word": "Estate ",
+          "start": 3.153791748046875,
+          "end": 3.467791748046875
+        },
+        {
+          "word": "company.",
+          "start": 3.467791748046875,
+          "end": 4.117791748046875
+        },
+        {
+          "word": " Am ",
+          "start": 4.163541748046875,
+          "end": 4.326541748046875
+        },
+        {
+          "word": "I ",
+          "start": 4.326541748046875,
+          "end": 4.407541748046875
+        },
+        {
+          "word": "catching ",
+          "start": 4.407541748046875,
+          "end": 4.697541748046875
+        },
+        {
+          "word": "you ",
+          "start": 4.697541748046875,
+          "end": 4.802541748046875
+        },
+        {
+          "word": "at ",
+          "start": 4.802541748046875,
+          "end": 4.883541748046875
+        },
+        {
+          "word": "a ",
+          "start": 4.883541748046875,
+          "end": 4.941541748046875
+        },
+        {
+          "word": "good ",
+          "start": 4.941541748046875,
+          "end": 5.081541748046875
+        },
+        {
+          "word": "time?",
+          "start": 5.081541748046875,
+          "end": 5.464541748046875
+        }
+      ],
+      "metadata": {
+        "response_id": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hey. Yes. You are. How are you doing?",
+      "words": [
+        {
+          "word": "Hey. ",
+          "start": 7.92,
+          "end": 8.4
+        },
+        {
+          "word": "Yes. ",
+          "start": 8.4,
+          "end": 8.64
+        },
+        {
+          "word": "You ",
+          "start": 8.64,
+          "end": 8.88
+        },
+        {
+          "word": "are. ",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "word": "How ",
+          "start": 9.2,
+          "end": 9.44
+        },
+        {
+          "word": "are ",
+          "start": 9.44,
+          "end": 9.6
+        },
+        {
+          "word": "you ",
+          "start": 9.6,
+          "end": 9.68
+        },
+        {
+          "word": "doing?",
+          "start": 9.68,
+          "end": 9.7599997
+        }
+      ]
+    },
+    {
+      "role": "agent",
+      "content": "I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?",
+      "words": [
+        {
+          "word": "I’m ",
+          "start": 11.264,
+          "end": 11.496
+        },
+        {
+          "word": "doing ",
+          "start": 11.496,
+          "end": 11.716
+        },
+        {
+          "word": "great, ",
+          "start": 11.716,
+          "end": 11.96
+        },
+        {
+          "word": "thanks ",
+          "start": 11.96,
+          "end": 12.251
+        },
+        {
+          "word": "for ",
+          "start": 12.251,
+          "end": 12.401
+        },
+        {
+          "word": "asking!",
+          "start": 12.401,
+          "end": 13.04
+        },
+        {
+          "word": " I’m ",
+          "start": 13.086041748046876,
+          "end": 13.353041748046875
+        },
+        {
+          "word": "reaching ",
+          "start": 13.353041748046875,
+          "end": 13.644041748046876
+        },
+        {
+          "word": "out ",
+          "start": 13.644041748046876,
+          "end": 13.806041748046875
+        },
+        {
+          "word": "because ",
+          "start": 13.806041748046875,
+          "end": 14.050041748046874
+        },
+        {
+          "word": "you ",
+          "start": 14.050041748046874,
+          "end": 14.189041748046876
+        },
+        {
+          "word": "recently ",
+          "start": 14.189041748046876,
+          "end": 14.607041748046875
+        },
+        {
+          "word": "showed ",
+          "start": 14.607041748046875,
+          "end": 14.863041748046875
+        },
+        {
+          "word": "interest ",
+          "start": 14.863041748046875,
+          "end": 15.258041748046875
+        },
+        {
+          "word": "in ",
+          "start": 15.258041748046875,
+          "end": 15.397041748046876
+        },
+        {
+          "word": "524 ",
+          "start": 15.397041748046876,
+          "end": 15.699041748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 15.699041748046875,
+          "end": 16.035041748046876
+        },
+        {
+          "word": "Lane ",
+          "start": 16.035041748046876,
+          "end": 16.186041748046875
+        },
+        {
+          "word": "in ",
+          "start": 16.186041748046875,
+          "end": 16.500041748046876
+        },
+        {
+          "word": "Palo ",
+          "start": 16.500041748046876,
+          "end": 16.836041748046874
+        },
+        {
+          "word": "Alto, ",
+          "start": 16.836041748046874,
+          "end": 17.301041748046874
+        },
+        {
+          "word": "near ",
+          "start": 17.301041748046874,
+          "end": 17.614041748046876
+        },
+        {
+          "word": "Stanford.",
+          "start": 17.614041748046876,
+          "end": 17.754041748046873
+        },
+        {
+          "word": " I ",
+          "start": 19.541208251953126,
+          "end": 19.646208251953126
+        },
+        {
+          "word": "wanted ",
+          "start": 19.646208251953126,
+          "end": 19.843208251953126
+        },
+        {
+          "word": "to ",
+          "start": 19.843208251953126,
+          "end": 19.913208251953126
+        },
+        {
+          "word": "see ",
+          "start": 19.913208251953126,
+          "end": 20.041208251953126
+        },
+        {
+          "word": "how ",
+          "start": 20.041208251953126,
+          "end": 20.168208251953125
+        },
+        {
+          "word": "I ",
+          "start": 20.168208251953125,
+          "end": 20.238208251953125
+        },
+        {
+          "word": "can ",
+          "start": 20.238208251953125,
+          "end": 20.366208251953125
+        },
+        {
+          "word": "help ",
+          "start": 20.366208251953125,
+          "end": 20.563208251953125
+        },
+        {
+          "word": "you ",
+          "start": 20.563208251953125,
+          "end": 20.702208251953124
+        },
+        {
+          "word": "further.",
+          "start": 20.702208251953124,
+          "end": 21.306208251953127
+        },
+        {
+          "word": " What ",
+          "start": 21.329375,
+          "end": 21.515375
+        },
+        {
+          "word": "are ",
+          "start": 21.515375,
+          "end": 21.619375
+        },
+        {
+          "word": "your ",
+          "start": 21.619375,
+          "end": 21.747375
+        },
+        {
+          "word": "thoughts ",
+          "start": 21.747375,
+          "end": 22.026375
+        },
+        {
+          "word": "on ",
+          "start": 22.026375,
+          "end": 22.130375
+        },
+        {
+          "word": "the ",
+          "start": 22.130375,
+          "end": 22.223375
+        },
+        {
+          "word": "property ",
+          "start": 22.223375,
+          "end": 22.630375
+        },
+        {
+          "word": "so ",
+          "start": 22.630375,
+          "end": 22.804375
+        },
+        {
+          "word": "far?",
+          "start": 22.804375,
+          "end": 23.256375
+        }
+      ],
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "recording_url": "https://dxc03zgurdly9.cloudfront.net/9105f4e28c9aafbd2285676069d8f4860ad7f82022bb9f787155da91ba54dd79/recording.wav",
+  "public_log_url": "https://dxc03zgurdly9.cloudfront.net/9105f4e28c9aafbd2285676069d8f4860ad7f82022bb9f787155da91ba54dd79/public.log",
+  "disconnection_reason": "user_hangup",
+  "latency": {
+    "llm": {
+      "p99": 912.25,
+      "min": 442,
+      "max": 917,
+      "p90": 869.5,
+      "num": 2,
+      "values": [
+        442,
+        917
+      ],
+      "p50": 679.5,
+      "p95": 893.25
+    },
+    "e2e": {
+      "p99": 1376.000244140625,
+      "min": 1376.000244140625,
+      "max": 1376.000244140625,
+      "p90": 1376.000244140625,
+      "num": 1,
+      "values": [
+        1376.000244140625
+      ],
+      "p50": 1376.000244140625,
+      "p95": 1376.000244140625
+    },
+    "tts": {
+      "p99": 329.08,
+      "min": 238,
+      "max": 330,
+      "p90": 320.8,
+      "num": 2,
+      "values": [
+        238,
+        330
+      ],
+      "p50": 284,
+      "p95": 325.4
+    }
+  },
+  "call_cost": {
+    "total_duration_unit_price": 0.1916667,
+    "product_costs": [
+      {
+        "unit_price": 0.1166667,
+        "product": "elevenlabs_tts",
+        "cost": 2.9166667
+      },
+      {
+        "unit_price": 0.075,
+        "product": "gpt_4_1",
+        "cost": 1.875
+      }
+    ],
+    "combined_cost": 4.7916667,
+    "total_duration_seconds": 25
+  },
+  "call_analysis": {
+    "in_voicemail": false,
+    "call_summary": "The agent, Chloe from Retell Real Estate, contacted the user, Sam, to discuss their interest in a property located at 524 Retell Lane in Palo Alto. Chloe inquired about Sam's thoughts on the property and offered assistance in the next steps.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "call_successful": false
+  },
+  "opt_out_sensitive_data_storage": false,
+  "opt_in_signed_url": false,
+  "llm_token_usage": {
+    "values": [
+      671,
+      691,
+      691,
+      696
+    ],
+    "average": 687.25,
+    "num_requests": 4
+  },
+  "access_token": "eyJhbGciOiJIUzI1NiJ9.eyJ2aWRlbyI6eyJyb29tSm9pbiI6dHJ1ZSwicm9vbSI6IndlYl9jYWxsXzVmOTEzY2Q2YTA3NjE3MmYzN2Q3ZTlmNjJlYiJ9LCJpc3MiOiJBUElqWGZBMzVHTmM3WHgiLCJleHAiOjE3NDkxMTk3OTAsIm5iZiI6MCwic3ViIjoiY2xpZW50In0.Rt8w-A8EJCCg_71bcLjCALJ5FBpdmfRFKlSE1-4X8lk"
+},
+{
+  "call_id": "call_kd912d86a076172f37d7e9f62eb",
+  "call_type": "web_call",
+  "agent_id": "agent_ae8993993d406d303d2b04b247",
+  "collected_dynamic_variables": {
+    "current_agent_state": "warm_intro"
+  },
+  "call_status": "ended",
+  "start_timestamp": 1749119190775,
+  "end_timestamp": 1749119215115,
+  "duration_ms": 24340,
+  "transcript": "Agent: Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?\nUser: Hey. Yes. You are. How are you doing?\nAgent: I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?\n",
+  "transcript_object": [
+    {
+      "role": "agent",
+      "content": "Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?",
+      "words": [
+        {
+          "word": "Hello, ",
+          "start": 0.797,
+          "end": 1.111
+        },
+        {
+          "word": "Sam.",
+          "start": 1.111,
+          "end": 1.61
+        },
+        {
+          "word": " This ",
+          "start": 1.655791748046875,
+          "end": 1.841791748046875
+        },
+        {
+          "word": "is ",
+          "start": 1.841791748046875,
+          "end": 1.957791748046875
+        },
+        {
+          "word": "Chloe ",
+          "start": 1.957791748046875,
+          "end": 2.317791748046875
+        },
+        {
+          "word": "from ",
+          "start": 2.317791748046875,
+          "end": 2.573791748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 2.573791748046875,
+          "end": 2.944791748046875
+        },
+        {
+          "word": "Real ",
+          "start": 2.944791748046875,
+          "end": 3.153791748046875
+        },
+        {
+          "word": "Estate ",
+          "start": 3.153791748046875,
+          "end": 3.467791748046875
+        },
+        {
+          "word": "company.",
+          "start": 3.467791748046875,
+          "end": 4.117791748046875
+        },
+        {
+          "word": " Am ",
+          "start": 4.163541748046875,
+          "end": 4.326541748046875
+        },
+        {
+          "word": "I ",
+          "start": 4.326541748046875,
+          "end": 4.407541748046875
+        },
+        {
+          "word": "catching ",
+          "start": 4.407541748046875,
+          "end": 4.697541748046875
+        },
+        {
+          "word": "you ",
+          "start": 4.697541748046875,
+          "end": 4.802541748046875
+        },
+        {
+          "word": "at ",
+          "start": 4.802541748046875,
+          "end": 4.883541748046875
+        },
+        {
+          "word": "a ",
+          "start": 4.883541748046875,
+          "end": 4.941541748046875
+        },
+        {
+          "word": "good ",
+          "start": 4.941541748046875,
+          "end": 5.081541748046875
+        },
+        {
+          "word": "time?",
+          "start": 5.081541748046875,
+          "end": 5.464541748046875
+        }
+      ],
+      "metadata": {
+        "response_id": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hey. Yes. You are. How are you doing?",
+      "words": [
+        {
+          "word": "Hey. ",
+          "start": 7.92,
+          "end": 8.4
+        },
+        {
+          "word": "Yes. ",
+          "start": 8.4,
+          "end": 8.64
+        },
+        {
+          "word": "You ",
+          "start": 8.64,
+          "end": 8.88
+        },
+        {
+          "word": "are. ",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "word": "How ",
+          "start": 9.2,
+          "end": 9.44
+        },
+        {
+          "word": "are ",
+          "start": 9.44,
+          "end": 9.6
+        },
+        {
+          "word": "you ",
+          "start": 9.6,
+          "end": 9.68
+        },
+        {
+          "word": "doing?",
+          "start": 9.68,
+          "end": 9.7599997
+        }
+      ]
+    },
+    {
+      "role": "agent",
+      "content": "I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?",
+      "words": [
+        {
+          "word": "I’m ",
+          "start": 11.264,
+          "end": 11.496
+        },
+        {
+          "word": "doing ",
+          "start": 11.496,
+          "end": 11.716
+        },
+        {
+          "word": "great, ",
+          "start": 11.716,
+          "end": 11.96
+        },
+        {
+          "word": "thanks ",
+          "start": 11.96,
+          "end": 12.251
+        },
+        {
+          "word": "for ",
+          "start": 12.251,
+          "end": 12.401
+        },
+        {
+          "word": "asking!",
+          "start": 12.401,
+          "end": 13.04
+        },
+        {
+          "word": " I’m ",
+          "start": 13.086041748046876,
+          "end": 13.353041748046875
+        },
+        {
+          "word": "reaching ",
+          "start": 13.353041748046875,
+          "end": 13.644041748046876
+        },
+        {
+          "word": "out ",
+          "start": 13.644041748046876,
+          "end": 13.806041748046875
+        },
+        {
+          "word": "because ",
+          "start": 13.806041748046875,
+          "end": 14.050041748046874
+        },
+        {
+          "word": "you ",
+          "start": 14.050041748046874,
+          "end": 14.189041748046876
+        },
+        {
+          "word": "recently ",
+          "start": 14.189041748046876,
+          "end": 14.607041748046875
+        },
+        {
+          "word": "showed ",
+          "start": 14.607041748046875,
+          "end": 14.863041748046875
+        },
+        {
+          "word": "interest ",
+          "start": 14.863041748046875,
+          "end": 15.258041748046875
+        },
+        {
+          "word": "in ",
+          "start": 15.258041748046875,
+          "end": 15.397041748046876
+        },
+        {
+          "word": "524 ",
+          "start": 15.397041748046876,
+          "end": 15.699041748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 15.699041748046875,
+          "end": 16.035041748046876
+        },
+        {
+          "word": "Lane ",
+          "start": 16.035041748046876,
+          "end": 16.186041748046875
+        },
+        {
+          "word": "in ",
+          "start": 16.186041748046875,
+          "end": 16.500041748046876
+        },
+        {
+          "word": "Palo ",
+          "start": 16.500041748046876,
+          "end": 16.836041748046874
+        },
+        {
+          "word": "Alto, ",
+          "start": 16.836041748046874,
+          "end": 17.301041748046874
+        },
+        {
+          "word": "near ",
+          "start": 17.301041748046874,
+          "end": 17.614041748046876
+        },
+        {
+          "word": "Stanford.",
+          "start": 17.614041748046876,
+          "end": 17.754041748046873
+        },
+        {
+          "word": " I ",
+          "start": 19.541208251953126,
+          "end": 19.646208251953126
+        },
+        {
+          "word": "wanted ",
+          "start": 19.646208251953126,
+          "end": 19.843208251953126
+        },
+        {
+          "word": "to ",
+          "start": 19.843208251953126,
+          "end": 19.913208251953126
+        },
+        {
+          "word": "see ",
+          "start": 19.913208251953126,
+          "end": 20.041208251953126
+        },
+        {
+          "word": "how ",
+          "start": 20.041208251953126,
+          "end": 20.168208251953125
+        },
+        {
+          "word": "I ",
+          "start": 20.168208251953125,
+          "end": 20.238208251953125
+        },
+        {
+          "word": "can ",
+          "start": 20.238208251953125,
+          "end": 20.366208251953125
+        },
+        {
+          "word": "help ",
+          "start": 20.366208251953125,
+          "end": 20.563208251953125
+        },
+        {
+          "word": "you ",
+          "start": 20.563208251953125,
+          "end": 20.702208251953124
+        },
+        {
+          "word": "further.",
+          "start": 20.702208251953124,
+          "end": 21.306208251953127
+        },
+        {
+          "word": " What ",
+          "start": 21.329375,
+          "end": 21.515375
+        },
+        {
+          "word": "are ",
+          "start": 21.515375,
+          "end": 21.619375
+        },
+        {
+          "word": "your ",
+          "start": 21.619375,
+          "end": 21.747375
+        },
+        {
+          "word": "thoughts ",
+          "start": 21.747375,
+          "end": 22.026375
+        },
+        {
+          "word": "on ",
+          "start": 22.026375,
+          "end": 22.130375
+        },
+        {
+          "word": "the ",
+          "start": 22.130375,
+          "end": 22.223375
+        },
+        {
+          "word": "property ",
+          "start": 22.223375,
+          "end": 22.630375
+        },
+        {
+          "word": "so ",
+          "start": 22.630375,
+          "end": 22.804375
+        },
+        {
+          "word": "far?",
+          "start": 22.804375,
+          "end": 23.256375
+        }
+      ],
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "transcript_with_tool_calls": [
+    {
+      "role": "agent",
+      "content": "Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?",
+      "words": [
+        {
+          "word": "Hello, ",
+          "start": 0.797,
+          "end": 1.111
+        },
+        {
+          "word": "Sam.",
+          "start": 1.111,
+          "end": 1.61
+        },
+        {
+          "word": " This ",
+          "start": 1.655791748046875,
+          "end": 1.841791748046875
+        },
+        {
+          "word": "is ",
+          "start": 1.841791748046875,
+          "end": 1.957791748046875
+        },
+        {
+          "word": "Chloe ",
+          "start": 1.957791748046875,
+          "end": 2.317791748046875
+        },
+        {
+          "word": "from ",
+          "start": 2.317791748046875,
+          "end": 2.573791748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 2.573791748046875,
+          "end": 2.944791748046875
+        },
+        {
+          "word": "Real ",
+          "start": 2.944791748046875,
+          "end": 3.153791748046875
+        },
+        {
+          "word": "Estate ",
+          "start": 3.153791748046875,
+          "end": 3.467791748046875
+        },
+        {
+          "word": "company.",
+          "start": 3.467791748046875,
+          "end": 4.117791748046875
+        },
+        {
+          "word": " Am ",
+          "start": 4.163541748046875,
+          "end": 4.326541748046875
+        },
+        {
+          "word": "I ",
+          "start": 4.326541748046875,
+          "end": 4.407541748046875
+        },
+        {
+          "word": "catching ",
+          "start": 4.407541748046875,
+          "end": 4.697541748046875
+        },
+        {
+          "word": "you ",
+          "start": 4.697541748046875,
+          "end": 4.802541748046875
+        },
+        {
+          "word": "at ",
+          "start": 4.802541748046875,
+          "end": 4.883541748046875
+        },
+        {
+          "word": "a ",
+          "start": 4.883541748046875,
+          "end": 4.941541748046875
+        },
+        {
+          "word": "good ",
+          "start": 4.941541748046875,
+          "end": 5.081541748046875
+        },
+        {
+          "word": "time?",
+          "start": 5.081541748046875,
+          "end": 5.464541748046875
+        }
+      ],
+      "metadata": {
+        "response_id": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hey. Yes. You are. How are you doing?",
+      "words": [
+        {
+          "word": "Hey. ",
+          "start": 7.92,
+          "end": 8.4
+        },
+        {
+          "word": "Yes. ",
+          "start": 8.4,
+          "end": 8.64
+        },
+        {
+          "word": "You ",
+          "start": 8.64,
+          "end": 8.88
+        },
+        {
+          "word": "are. ",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "word": "How ",
+          "start": 9.2,
+          "end": 9.44
+        },
+        {
+          "word": "are ",
+          "start": 9.44,
+          "end": 9.6
+        },
+        {
+          "word": "you ",
+          "start": 9.6,
+          "end": 9.68
+        },
+        {
+          "word": "doing?",
+          "start": 9.68,
+          "end": 9.7599997
+        }
+      ]
+    },
+    {
+      "role": "agent",
+      "content": "I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?",
+      "words": [
+        {
+          "word": "I’m ",
+          "start": 11.264,
+          "end": 11.496
+        },
+        {
+          "word": "doing ",
+          "start": 11.496,
+          "end": 11.716
+        },
+        {
+          "word": "great, ",
+          "start": 11.716,
+          "end": 11.96
+        },
+        {
+          "word": "thanks ",
+          "start": 11.96,
+          "end": 12.251
+        },
+        {
+          "word": "for ",
+          "start": 12.251,
+          "end": 12.401
+        },
+        {
+          "word": "asking!",
+          "start": 12.401,
+          "end": 13.04
+        },
+        {
+          "word": " I’m ",
+          "start": 13.086041748046876,
+          "end": 13.353041748046875
+        },
+        {
+          "word": "reaching ",
+          "start": 13.353041748046875,
+          "end": 13.644041748046876
+        },
+        {
+          "word": "out ",
+          "start": 13.644041748046876,
+          "end": 13.806041748046875
+        },
+        {
+          "word": "because ",
+          "start": 13.806041748046875,
+          "end": 14.050041748046874
+        },
+        {
+          "word": "you ",
+          "start": 14.050041748046874,
+          "end": 14.189041748046876
+        },
+        {
+          "word": "recently ",
+          "start": 14.189041748046876,
+          "end": 14.607041748046875
+        },
+        {
+          "word": "showed ",
+          "start": 14.607041748046875,
+          "end": 14.863041748046875
+        },
+        {
+          "word": "interest ",
+          "start": 14.863041748046875,
+          "end": 15.258041748046875
+        },
+        {
+          "word": "in ",
+          "start": 15.258041748046875,
+          "end": 15.397041748046876
+        },
+        {
+          "word": "524 ",
+          "start": 15.397041748046876,
+          "end": 15.699041748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 15.699041748046875,
+          "end": 16.035041748046876
+        },
+        {
+          "word": "Lane ",
+          "start": 16.035041748046876,
+          "end": 16.186041748046875
+        },
+        {
+          "word": "in ",
+          "start": 16.186041748046875,
+          "end": 16.500041748046876
+        },
+        {
+          "word": "Palo ",
+          "start": 16.500041748046876,
+          "end": 16.836041748046874
+        },
+        {
+          "word": "Alto, ",
+          "start": 16.836041748046874,
+          "end": 17.301041748046874
+        },
+        {
+          "word": "near ",
+          "start": 17.301041748046874,
+          "end": 17.614041748046876
+        },
+        {
+          "word": "Stanford.",
+          "start": 17.614041748046876,
+          "end": 17.754041748046873
+        },
+        {
+          "word": " I ",
+          "start": 19.541208251953126,
+          "end": 19.646208251953126
+        },
+        {
+          "word": "wanted ",
+          "start": 19.646208251953126,
+          "end": 19.843208251953126
+        },
+        {
+          "word": "to ",
+          "start": 19.843208251953126,
+          "end": 19.913208251953126
+        },
+        {
+          "word": "see ",
+          "start": 19.913208251953126,
+          "end": 20.041208251953126
+        },
+        {
+          "word": "how ",
+          "start": 20.041208251953126,
+          "end": 20.168208251953125
+        },
+        {
+          "word": "I ",
+          "start": 20.168208251953125,
+          "end": 20.238208251953125
+        },
+        {
+          "word": "can ",
+          "start": 20.238208251953125,
+          "end": 20.366208251953125
+        },
+        {
+          "word": "help ",
+          "start": 20.366208251953125,
+          "end": 20.563208251953125
+        },
+        {
+          "word": "you ",
+          "start": 20.563208251953125,
+          "end": 20.702208251953124
+        },
+        {
+          "word": "further.",
+          "start": 20.702208251953124,
+          "end": 21.306208251953127
+        },
+        {
+          "word": " What ",
+          "start": 21.329375,
+          "end": 21.515375
+        },
+        {
+          "word": "are ",
+          "start": 21.515375,
+          "end": 21.619375
+        },
+        {
+          "word": "your ",
+          "start": 21.619375,
+          "end": 21.747375
+        },
+        {
+          "word": "thoughts ",
+          "start": 21.747375,
+          "end": 22.026375
+        },
+        {
+          "word": "on ",
+          "start": 22.026375,
+          "end": 22.130375
+        },
+        {
+          "word": "the ",
+          "start": 22.130375,
+          "end": 22.223375
+        },
+        {
+          "word": "property ",
+          "start": 22.223375,
+          "end": 22.630375
+        },
+        {
+          "word": "so ",
+          "start": 22.630375,
+          "end": 22.804375
+        },
+        {
+          "word": "far?",
+          "start": 22.804375,
+          "end": 23.256375
+        }
+      ],
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "recording_url": "https://dxc03zgurdly9.cloudfront.net/9105f4e28c9aafbd2285676069d8f4860ad7f82022bb9f787155da91ba54dd79/recording.wav",
+  "public_log_url": "https://dxc03zgurdly9.cloudfront.net/9105f4e28c9aafbd2285676069d8f4860ad7f82022bb9f787155da91ba54dd79/public.log",
+  "disconnection_reason": "user_hangup",
+  "latency": {
+    "llm": {
+      "p99": 912.25,
+      "min": 442,
+      "max": 917,
+      "p90": 869.5,
+      "num": 2,
+      "values": [
+        442,
+        917
+      ],
+      "p50": 679.5,
+      "p95": 893.25
+    },
+    "e2e": {
+      "p99": 1376.000244140625,
+      "min": 1376.000244140625,
+      "max": 1376.000244140625,
+      "p90": 1376.000244140625,
+      "num": 1,
+      "values": [
+        1376.000244140625
+      ],
+      "p50": 1376.000244140625,
+      "p95": 1376.000244140625
+    },
+    "tts": {
+      "p99": 329.08,
+      "min": 238,
+      "max": 330,
+      "p90": 320.8,
+      "num": 2,
+      "values": [
+        238,
+        330
+      ],
+      "p50": 284,
+      "p95": 325.4
+    }
+  },
+  "call_cost": {
+    "total_duration_unit_price": 0.1916667,
+    "product_costs": [
+      {
+        "unit_price": 0.1166667,
+        "product": "elevenlabs_tts",
+        "cost": 2.9166667
+      },
+      {
+        "unit_price": 0.075,
+        "product": "gpt_4_1",
+        "cost": 1.875
+      }
+    ],
+    "combined_cost": 4.7916667,
+    "total_duration_seconds": 25
+  },
+  "call_analysis": {
+    "in_voicemail": false,
+    "call_summary": "The agent, Chloe from Retell Real Estate, contacted the user, Sam, to discuss their interest in a property located at 524 Retell Lane in Palo Alto. Chloe inquired about Sam's thoughts on the property and offered assistance in the next steps.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "call_successful": false
+  },
+  "opt_out_sensitive_data_storage": false,
+  "opt_in_signed_url": false,
+  "llm_token_usage": {
+    "values": [
+      671,
+      691,
+      691,
+      696
+    ],
+    "average": 687.25,
+    "num_requests": 4
+  },
+  "access_token": "eyJhbGciOiJIUzI1NiJ9.eyJ2aWRlbyI6eyJyb29tSm9pbiI6dHJ1ZSwicm9vbSI6IndlYl9jYWxsXzVmOTEzY2Q2YTA3NjE3MmYzN2Q3ZTlmNjJlYiJ9LCJpc3MiOiJBUElqWGZBMzVHTmM3WHgiLCJleHAiOjE3NDkxMTk3OTAsIm5iZiI6MCwic3ViIjoiY2xpZW50In0.Rt8w-A8EJCCg_71bcLjCALJ5FBpdmfRFKlSE1-4X8lk"
+},
+{
+  "call_id": "call_5f91dew093kiu72f37d7e9f62eb",
+  "call_type": "web_call",
+  "agent_id": "agent_ae8993993d406d303d2b04b247",
+  "collected_dynamic_variables": {
+    "current_agent_state": "warm_intro"
+  },
+  "call_status": "ended",
+  "start_timestamp": 1749119190775,
+  "end_timestamp": 1749119215115,
+  "duration_ms": 24340,
+  "transcript": "Agent: Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?\nUser: Hey. Yes. You are. How are you doing?\nAgent: I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?\n",
+  "transcript_object": [
+    {
+      "role": "agent",
+      "content": "Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?",
+      "words": [
+        {
+          "word": "Hello, ",
+          "start": 0.797,
+          "end": 1.111
+        },
+        {
+          "word": "Sam.",
+          "start": 1.111,
+          "end": 1.61
+        },
+        {
+          "word": " This ",
+          "start": 1.655791748046875,
+          "end": 1.841791748046875
+        },
+        {
+          "word": "is ",
+          "start": 1.841791748046875,
+          "end": 1.957791748046875
+        },
+        {
+          "word": "Chloe ",
+          "start": 1.957791748046875,
+          "end": 2.317791748046875
+        },
+        {
+          "word": "from ",
+          "start": 2.317791748046875,
+          "end": 2.573791748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 2.573791748046875,
+          "end": 2.944791748046875
+        },
+        {
+          "word": "Real ",
+          "start": 2.944791748046875,
+          "end": 3.153791748046875
+        },
+        {
+          "word": "Estate ",
+          "start": 3.153791748046875,
+          "end": 3.467791748046875
+        },
+        {
+          "word": "company.",
+          "start": 3.467791748046875,
+          "end": 4.117791748046875
+        },
+        {
+          "word": " Am ",
+          "start": 4.163541748046875,
+          "end": 4.326541748046875
+        },
+        {
+          "word": "I ",
+          "start": 4.326541748046875,
+          "end": 4.407541748046875
+        },
+        {
+          "word": "catching ",
+          "start": 4.407541748046875,
+          "end": 4.697541748046875
+        },
+        {
+          "word": "you ",
+          "start": 4.697541748046875,
+          "end": 4.802541748046875
+        },
+        {
+          "word": "at ",
+          "start": 4.802541748046875,
+          "end": 4.883541748046875
+        },
+        {
+          "word": "a ",
+          "start": 4.883541748046875,
+          "end": 4.941541748046875
+        },
+        {
+          "word": "good ",
+          "start": 4.941541748046875,
+          "end": 5.081541748046875
+        },
+        {
+          "word": "time?",
+          "start": 5.081541748046875,
+          "end": 5.464541748046875
+        }
+      ],
+      "metadata": {
+        "response_id": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hey. Yes. You are. How are you doing?",
+      "words": [
+        {
+          "word": "Hey. ",
+          "start": 7.92,
+          "end": 8.4
+        },
+        {
+          "word": "Yes. ",
+          "start": 8.4,
+          "end": 8.64
+        },
+        {
+          "word": "You ",
+          "start": 8.64,
+          "end": 8.88
+        },
+        {
+          "word": "are. ",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "word": "How ",
+          "start": 9.2,
+          "end": 9.44
+        },
+        {
+          "word": "are ",
+          "start": 9.44,
+          "end": 9.6
+        },
+        {
+          "word": "you ",
+          "start": 9.6,
+          "end": 9.68
+        },
+        {
+          "word": "doing?",
+          "start": 9.68,
+          "end": 9.7599997
+        }
+      ]
+    },
+    {
+      "role": "agent",
+      "content": "I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?",
+      "words": [
+        {
+          "word": "I’m ",
+          "start": 11.264,
+          "end": 11.496
+        },
+        {
+          "word": "doing ",
+          "start": 11.496,
+          "end": 11.716
+        },
+        {
+          "word": "great, ",
+          "start": 11.716,
+          "end": 11.96
+        },
+        {
+          "word": "thanks ",
+          "start": 11.96,
+          "end": 12.251
+        },
+        {
+          "word": "for ",
+          "start": 12.251,
+          "end": 12.401
+        },
+        {
+          "word": "asking!",
+          "start": 12.401,
+          "end": 13.04
+        },
+        {
+          "word": " I’m ",
+          "start": 13.086041748046876,
+          "end": 13.353041748046875
+        },
+        {
+          "word": "reaching ",
+          "start": 13.353041748046875,
+          "end": 13.644041748046876
+        },
+        {
+          "word": "out ",
+          "start": 13.644041748046876,
+          "end": 13.806041748046875
+        },
+        {
+          "word": "because ",
+          "start": 13.806041748046875,
+          "end": 14.050041748046874
+        },
+        {
+          "word": "you ",
+          "start": 14.050041748046874,
+          "end": 14.189041748046876
+        },
+        {
+          "word": "recently ",
+          "start": 14.189041748046876,
+          "end": 14.607041748046875
+        },
+        {
+          "word": "showed ",
+          "start": 14.607041748046875,
+          "end": 14.863041748046875
+        },
+        {
+          "word": "interest ",
+          "start": 14.863041748046875,
+          "end": 15.258041748046875
+        },
+        {
+          "word": "in ",
+          "start": 15.258041748046875,
+          "end": 15.397041748046876
+        },
+        {
+          "word": "524 ",
+          "start": 15.397041748046876,
+          "end": 15.699041748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 15.699041748046875,
+          "end": 16.035041748046876
+        },
+        {
+          "word": "Lane ",
+          "start": 16.035041748046876,
+          "end": 16.186041748046875
+        },
+        {
+          "word": "in ",
+          "start": 16.186041748046875,
+          "end": 16.500041748046876
+        },
+        {
+          "word": "Palo ",
+          "start": 16.500041748046876,
+          "end": 16.836041748046874
+        },
+        {
+          "word": "Alto, ",
+          "start": 16.836041748046874,
+          "end": 17.301041748046874
+        },
+        {
+          "word": "near ",
+          "start": 17.301041748046874,
+          "end": 17.614041748046876
+        },
+        {
+          "word": "Stanford.",
+          "start": 17.614041748046876,
+          "end": 17.754041748046873
+        },
+        {
+          "word": " I ",
+          "start": 19.541208251953126,
+          "end": 19.646208251953126
+        },
+        {
+          "word": "wanted ",
+          "start": 19.646208251953126,
+          "end": 19.843208251953126
+        },
+        {
+          "word": "to ",
+          "start": 19.843208251953126,
+          "end": 19.913208251953126
+        },
+        {
+          "word": "see ",
+          "start": 19.913208251953126,
+          "end": 20.041208251953126
+        },
+        {
+          "word": "how ",
+          "start": 20.041208251953126,
+          "end": 20.168208251953125
+        },
+        {
+          "word": "I ",
+          "start": 20.168208251953125,
+          "end": 20.238208251953125
+        },
+        {
+          "word": "can ",
+          "start": 20.238208251953125,
+          "end": 20.366208251953125
+        },
+        {
+          "word": "help ",
+          "start": 20.366208251953125,
+          "end": 20.563208251953125
+        },
+        {
+          "word": "you ",
+          "start": 20.563208251953125,
+          "end": 20.702208251953124
+        },
+        {
+          "word": "further.",
+          "start": 20.702208251953124,
+          "end": 21.306208251953127
+        },
+        {
+          "word": " What ",
+          "start": 21.329375,
+          "end": 21.515375
+        },
+        {
+          "word": "are ",
+          "start": 21.515375,
+          "end": 21.619375
+        },
+        {
+          "word": "your ",
+          "start": 21.619375,
+          "end": 21.747375
+        },
+        {
+          "word": "thoughts ",
+          "start": 21.747375,
+          "end": 22.026375
+        },
+        {
+          "word": "on ",
+          "start": 22.026375,
+          "end": 22.130375
+        },
+        {
+          "word": "the ",
+          "start": 22.130375,
+          "end": 22.223375
+        },
+        {
+          "word": "property ",
+          "start": 22.223375,
+          "end": 22.630375
+        },
+        {
+          "word": "so ",
+          "start": 22.630375,
+          "end": 22.804375
+        },
+        {
+          "word": "far?",
+          "start": 22.804375,
+          "end": 23.256375
+        }
+      ],
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "transcript_with_tool_calls": [
+    {
+      "role": "agent",
+      "content": "Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?",
+      "words": [
+        {
+          "word": "Hello, ",
+          "start": 0.797,
+          "end": 1.111
+        },
+        {
+          "word": "Sam.",
+          "start": 1.111,
+          "end": 1.61
+        },
+        {
+          "word": " This ",
+          "start": 1.655791748046875,
+          "end": 1.841791748046875
+        },
+        {
+          "word": "is ",
+          "start": 1.841791748046875,
+          "end": 1.957791748046875
+        },
+        {
+          "word": "Chloe ",
+          "start": 1.957791748046875,
+          "end": 2.317791748046875
+        },
+        {
+          "word": "from ",
+          "start": 2.317791748046875,
+          "end": 2.573791748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 2.573791748046875,
+          "end": 2.944791748046875
+        },
+        {
+          "word": "Real ",
+          "start": 2.944791748046875,
+          "end": 3.153791748046875
+        },
+        {
+          "word": "Estate ",
+          "start": 3.153791748046875,
+          "end": 3.467791748046875
+        },
+        {
+          "word": "company.",
+          "start": 3.467791748046875,
+          "end": 4.117791748046875
+        },
+        {
+          "word": " Am ",
+          "start": 4.163541748046875,
+          "end": 4.326541748046875
+        },
+        {
+          "word": "I ",
+          "start": 4.326541748046875,
+          "end": 4.407541748046875
+        },
+        {
+          "word": "catching ",
+          "start": 4.407541748046875,
+          "end": 4.697541748046875
+        },
+        {
+          "word": "you ",
+          "start": 4.697541748046875,
+          "end": 4.802541748046875
+        },
+        {
+          "word": "at ",
+          "start": 4.802541748046875,
+          "end": 4.883541748046875
+        },
+        {
+          "word": "a ",
+          "start": 4.883541748046875,
+          "end": 4.941541748046875
+        },
+        {
+          "word": "good ",
+          "start": 4.941541748046875,
+          "end": 5.081541748046875
+        },
+        {
+          "word": "time?",
+          "start": 5.081541748046875,
+          "end": 5.464541748046875
+        }
+      ],
+      "metadata": {
+        "response_id": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hey. Yes. You are. How are you doing?",
+      "words": [
+        {
+          "word": "Hey. ",
+          "start": 7.92,
+          "end": 8.4
+        },
+        {
+          "word": "Yes. ",
+          "start": 8.4,
+          "end": 8.64
+        },
+        {
+          "word": "You ",
+          "start": 8.64,
+          "end": 8.88
+        },
+        {
+          "word": "are. ",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "word": "How ",
+          "start": 9.2,
+          "end": 9.44
+        },
+        {
+          "word": "are ",
+          "start": 9.44,
+          "end": 9.6
+        },
+        {
+          "word": "you ",
+          "start": 9.6,
+          "end": 9.68
+        },
+        {
+          "word": "doing?",
+          "start": 9.68,
+          "end": 9.7599997
+        }
+      ]
+    },
+    {
+      "role": "agent",
+      "content": "I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?",
+      "words": [
+        {
+          "word": "I’m ",
+          "start": 11.264,
+          "end": 11.496
+        },
+        {
+          "word": "doing ",
+          "start": 11.496,
+          "end": 11.716
+        },
+        {
+          "word": "great, ",
+          "start": 11.716,
+          "end": 11.96
+        },
+        {
+          "word": "thanks ",
+          "start": 11.96,
+          "end": 12.251
+        },
+        {
+          "word": "for ",
+          "start": 12.251,
+          "end": 12.401
+        },
+        {
+          "word": "asking!",
+          "start": 12.401,
+          "end": 13.04
+        },
+        {
+          "word": " I’m ",
+          "start": 13.086041748046876,
+          "end": 13.353041748046875
+        },
+        {
+          "word": "reaching ",
+          "start": 13.353041748046875,
+          "end": 13.644041748046876
+        },
+        {
+          "word": "out ",
+          "start": 13.644041748046876,
+          "end": 13.806041748046875
+        },
+        {
+          "word": "because ",
+          "start": 13.806041748046875,
+          "end": 14.050041748046874
+        },
+        {
+          "word": "you ",
+          "start": 14.050041748046874,
+          "end": 14.189041748046876
+        },
+        {
+          "word": "recently ",
+          "start": 14.189041748046876,
+          "end": 14.607041748046875
+        },
+        {
+          "word": "showed ",
+          "start": 14.607041748046875,
+          "end": 14.863041748046875
+        },
+        {
+          "word": "interest ",
+          "start": 14.863041748046875,
+          "end": 15.258041748046875
+        },
+        {
+          "word": "in ",
+          "start": 15.258041748046875,
+          "end": 15.397041748046876
+        },
+        {
+          "word": "524 ",
+          "start": 15.397041748046876,
+          "end": 15.699041748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 15.699041748046875,
+          "end": 16.035041748046876
+        },
+        {
+          "word": "Lane ",
+          "start": 16.035041748046876,
+          "end": 16.186041748046875
+        },
+        {
+          "word": "in ",
+          "start": 16.186041748046875,
+          "end": 16.500041748046876
+        },
+        {
+          "word": "Palo ",
+          "start": 16.500041748046876,
+          "end": 16.836041748046874
+        },
+        {
+          "word": "Alto, ",
+          "start": 16.836041748046874,
+          "end": 17.301041748046874
+        },
+        {
+          "word": "near ",
+          "start": 17.301041748046874,
+          "end": 17.614041748046876
+        },
+        {
+          "word": "Stanford.",
+          "start": 17.614041748046876,
+          "end": 17.754041748046873
+        },
+        {
+          "word": " I ",
+          "start": 19.541208251953126,
+          "end": 19.646208251953126
+        },
+        {
+          "word": "wanted ",
+          "start": 19.646208251953126,
+          "end": 19.843208251953126
+        },
+        {
+          "word": "to ",
+          "start": 19.843208251953126,
+          "end": 19.913208251953126
+        },
+        {
+          "word": "see ",
+          "start": 19.913208251953126,
+          "end": 20.041208251953126
+        },
+        {
+          "word": "how ",
+          "start": 20.041208251953126,
+          "end": 20.168208251953125
+        },
+        {
+          "word": "I ",
+          "start": 20.168208251953125,
+          "end": 20.238208251953125
+        },
+        {
+          "word": "can ",
+          "start": 20.238208251953125,
+          "end": 20.366208251953125
+        },
+        {
+          "word": "help ",
+          "start": 20.366208251953125,
+          "end": 20.563208251953125
+        },
+        {
+          "word": "you ",
+          "start": 20.563208251953125,
+          "end": 20.702208251953124
+        },
+        {
+          "word": "further.",
+          "start": 20.702208251953124,
+          "end": 21.306208251953127
+        },
+        {
+          "word": " What ",
+          "start": 21.329375,
+          "end": 21.515375
+        },
+        {
+          "word": "are ",
+          "start": 21.515375,
+          "end": 21.619375
+        },
+        {
+          "word": "your ",
+          "start": 21.619375,
+          "end": 21.747375
+        },
+        {
+          "word": "thoughts ",
+          "start": 21.747375,
+          "end": 22.026375
+        },
+        {
+          "word": "on ",
+          "start": 22.026375,
+          "end": 22.130375
+        },
+        {
+          "word": "the ",
+          "start": 22.130375,
+          "end": 22.223375
+        },
+        {
+          "word": "property ",
+          "start": 22.223375,
+          "end": 22.630375
+        },
+        {
+          "word": "so ",
+          "start": 22.630375,
+          "end": 22.804375
+        },
+        {
+          "word": "far?",
+          "start": 22.804375,
+          "end": 23.256375
+        }
+      ],
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "recording_url": "https://dxc03zgurdly9.cloudfront.net/9105f4e28c9aafbd2285676069d8f4860ad7f82022bb9f787155da91ba54dd79/recording.wav",
+  "public_log_url": "https://dxc03zgurdly9.cloudfront.net/9105f4e28c9aafbd2285676069d8f4860ad7f82022bb9f787155da91ba54dd79/public.log",
+  "disconnection_reason": "user_hangup",
+  "latency": {
+    "llm": {
+      "p99": 912.25,
+      "min": 442,
+      "max": 917,
+      "p90": 869.5,
+      "num": 2,
+      "values": [
+        442,
+        917
+      ],
+      "p50": 679.5,
+      "p95": 893.25
+    },
+    "e2e": {
+      "p99": 1376.000244140625,
+      "min": 1376.000244140625,
+      "max": 1376.000244140625,
+      "p90": 1376.000244140625,
+      "num": 1,
+      "values": [
+        1376.000244140625
+      ],
+      "p50": 1376.000244140625,
+      "p95": 1376.000244140625
+    },
+    "tts": {
+      "p99": 329.08,
+      "min": 238,
+      "max": 330,
+      "p90": 320.8,
+      "num": 2,
+      "values": [
+        238,
+        330
+      ],
+      "p50": 284,
+      "p95": 325.4
+    }
+  },
+  "call_cost": {
+    "total_duration_unit_price": 0.1916667,
+    "product_costs": [
+      {
+        "unit_price": 0.1166667,
+        "product": "elevenlabs_tts",
+        "cost": 2.9166667
+      },
+      {
+        "unit_price": 0.075,
+        "product": "gpt_4_1",
+        "cost": 1.875
+      }
+    ],
+    "combined_cost": 4.7916667,
+    "total_duration_seconds": 25
+  },
+  "call_analysis": {
+    "in_voicemail": false,
+    "call_summary": "The agent, Chloe from Retell Real Estate, contacted the user, Sam, to discuss their interest in a property located at 524 Retell Lane in Palo Alto. Chloe inquired about Sam's thoughts on the property and offered assistance in the next steps.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "call_successful": false
+  },
+  "opt_out_sensitive_data_storage": false,
+  "opt_in_signed_url": false,
+  "llm_token_usage": {
+    "values": [
+      671,
+      691,
+      691,
+      696
+    ],
+    "average": 687.25,
+    "num_requests": 4
+  },
+  "access_token": "eyJhbGciOiJIUzI1NiJ9.eyJ2aWRlbyI6eyJyb29tSm9pbiI6dHJ1ZSwicm9vbSI6IndlYl9jYWxsXzVmOTEzY2Q2YTA3NjE3MmYzN2Q3ZTlmNjJlYiJ9LCJpc3MiOiJBUElqWGZBMzVHTmM3WHgiLCJleHAiOjE3NDkxMTk3OTAsIm5iZiI6MCwic3ViIjoiY2xpZW50In0.Rt8w-A8EJCCg_71bcLjCALJ5FBpdmfRFKlSE1-4X8lk"
+},
+{
+  "call_id": "call_5f913cd6a076172111dwmanj2901s",
+  "call_type": "web_call",
+  "agent_id": "agent_ae8993993d406d303d2b04b247",
+  "collected_dynamic_variables": {
+    "current_agent_state": "warm_intro"
+  },
+  "call_status": "ended",
+  "start_timestamp": 1749119190775,
+  "end_timestamp": 1749119215115,
+  "duration_ms": 24340,
+  "transcript": "Agent: Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?\nUser: Hey. Yes. You are. How are you doing?\nAgent: I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?\n",
+  "transcript_object": [
+    {
+      "role": "agent",
+      "content": "Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?",
+      "words": [
+        {
+          "word": "Hello, ",
+          "start": 0.797,
+          "end": 1.111
+        },
+        {
+          "word": "Sam.",
+          "start": 1.111,
+          "end": 1.61
+        },
+        {
+          "word": " This ",
+          "start": 1.655791748046875,
+          "end": 1.841791748046875
+        },
+        {
+          "word": "is ",
+          "start": 1.841791748046875,
+          "end": 1.957791748046875
+        },
+        {
+          "word": "Chloe ",
+          "start": 1.957791748046875,
+          "end": 2.317791748046875
+        },
+        {
+          "word": "from ",
+          "start": 2.317791748046875,
+          "end": 2.573791748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 2.573791748046875,
+          "end": 2.944791748046875
+        },
+        {
+          "word": "Real ",
+          "start": 2.944791748046875,
+          "end": 3.153791748046875
+        },
+        {
+          "word": "Estate ",
+          "start": 3.153791748046875,
+          "end": 3.467791748046875
+        },
+        {
+          "word": "company.",
+          "start": 3.467791748046875,
+          "end": 4.117791748046875
+        },
+        {
+          "word": " Am ",
+          "start": 4.163541748046875,
+          "end": 4.326541748046875
+        },
+        {
+          "word": "I ",
+          "start": 4.326541748046875,
+          "end": 4.407541748046875
+        },
+        {
+          "word": "catching ",
+          "start": 4.407541748046875,
+          "end": 4.697541748046875
+        },
+        {
+          "word": "you ",
+          "start": 4.697541748046875,
+          "end": 4.802541748046875
+        },
+        {
+          "word": "at ",
+          "start": 4.802541748046875,
+          "end": 4.883541748046875
+        },
+        {
+          "word": "a ",
+          "start": 4.883541748046875,
+          "end": 4.941541748046875
+        },
+        {
+          "word": "good ",
+          "start": 4.941541748046875,
+          "end": 5.081541748046875
+        },
+        {
+          "word": "time?",
+          "start": 5.081541748046875,
+          "end": 5.464541748046875
+        }
+      ],
+      "metadata": {
+        "response_id": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hey. Yes. You are. How are you doing?",
+      "words": [
+        {
+          "word": "Hey. ",
+          "start": 7.92,
+          "end": 8.4
+        },
+        {
+          "word": "Yes. ",
+          "start": 8.4,
+          "end": 8.64
+        },
+        {
+          "word": "You ",
+          "start": 8.64,
+          "end": 8.88
+        },
+        {
+          "word": "are. ",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "word": "How ",
+          "start": 9.2,
+          "end": 9.44
+        },
+        {
+          "word": "are ",
+          "start": 9.44,
+          "end": 9.6
+        },
+        {
+          "word": "you ",
+          "start": 9.6,
+          "end": 9.68
+        },
+        {
+          "word": "doing?",
+          "start": 9.68,
+          "end": 9.7599997
+        }
+      ]
+    },
+    {
+      "role": "agent",
+      "content": "I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?",
+      "words": [
+        {
+          "word": "I’m ",
+          "start": 11.264,
+          "end": 11.496
+        },
+        {
+          "word": "doing ",
+          "start": 11.496,
+          "end": 11.716
+        },
+        {
+          "word": "great, ",
+          "start": 11.716,
+          "end": 11.96
+        },
+        {
+          "word": "thanks ",
+          "start": 11.96,
+          "end": 12.251
+        },
+        {
+          "word": "for ",
+          "start": 12.251,
+          "end": 12.401
+        },
+        {
+          "word": "asking!",
+          "start": 12.401,
+          "end": 13.04
+        },
+        {
+          "word": " I’m ",
+          "start": 13.086041748046876,
+          "end": 13.353041748046875
+        },
+        {
+          "word": "reaching ",
+          "start": 13.353041748046875,
+          "end": 13.644041748046876
+        },
+        {
+          "word": "out ",
+          "start": 13.644041748046876,
+          "end": 13.806041748046875
+        },
+        {
+          "word": "because ",
+          "start": 13.806041748046875,
+          "end": 14.050041748046874
+        },
+        {
+          "word": "you ",
+          "start": 14.050041748046874,
+          "end": 14.189041748046876
+        },
+        {
+          "word": "recently ",
+          "start": 14.189041748046876,
+          "end": 14.607041748046875
+        },
+        {
+          "word": "showed ",
+          "start": 14.607041748046875,
+          "end": 14.863041748046875
+        },
+        {
+          "word": "interest ",
+          "start": 14.863041748046875,
+          "end": 15.258041748046875
+        },
+        {
+          "word": "in ",
+          "start": 15.258041748046875,
+          "end": 15.397041748046876
+        },
+        {
+          "word": "524 ",
+          "start": 15.397041748046876,
+          "end": 15.699041748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 15.699041748046875,
+          "end": 16.035041748046876
+        },
+        {
+          "word": "Lane ",
+          "start": 16.035041748046876,
+          "end": 16.186041748046875
+        },
+        {
+          "word": "in ",
+          "start": 16.186041748046875,
+          "end": 16.500041748046876
+        },
+        {
+          "word": "Palo ",
+          "start": 16.500041748046876,
+          "end": 16.836041748046874
+        },
+        {
+          "word": "Alto, ",
+          "start": 16.836041748046874,
+          "end": 17.301041748046874
+        },
+        {
+          "word": "near ",
+          "start": 17.301041748046874,
+          "end": 17.614041748046876
+        },
+        {
+          "word": "Stanford.",
+          "start": 17.614041748046876,
+          "end": 17.754041748046873
+        },
+        {
+          "word": " I ",
+          "start": 19.541208251953126,
+          "end": 19.646208251953126
+        },
+        {
+          "word": "wanted ",
+          "start": 19.646208251953126,
+          "end": 19.843208251953126
+        },
+        {
+          "word": "to ",
+          "start": 19.843208251953126,
+          "end": 19.913208251953126
+        },
+        {
+          "word": "see ",
+          "start": 19.913208251953126,
+          "end": 20.041208251953126
+        },
+        {
+          "word": "how ",
+          "start": 20.041208251953126,
+          "end": 20.168208251953125
+        },
+        {
+          "word": "I ",
+          "start": 20.168208251953125,
+          "end": 20.238208251953125
+        },
+        {
+          "word": "can ",
+          "start": 20.238208251953125,
+          "end": 20.366208251953125
+        },
+        {
+          "word": "help ",
+          "start": 20.366208251953125,
+          "end": 20.563208251953125
+        },
+        {
+          "word": "you ",
+          "start": 20.563208251953125,
+          "end": 20.702208251953124
+        },
+        {
+          "word": "further.",
+          "start": 20.702208251953124,
+          "end": 21.306208251953127
+        },
+        {
+          "word": " What ",
+          "start": 21.329375,
+          "end": 21.515375
+        },
+        {
+          "word": "are ",
+          "start": 21.515375,
+          "end": 21.619375
+        },
+        {
+          "word": "your ",
+          "start": 21.619375,
+          "end": 21.747375
+        },
+        {
+          "word": "thoughts ",
+          "start": 21.747375,
+          "end": 22.026375
+        },
+        {
+          "word": "on ",
+          "start": 22.026375,
+          "end": 22.130375
+        },
+        {
+          "word": "the ",
+          "start": 22.130375,
+          "end": 22.223375
+        },
+        {
+          "word": "property ",
+          "start": 22.223375,
+          "end": 22.630375
+        },
+        {
+          "word": "so ",
+          "start": 22.630375,
+          "end": 22.804375
+        },
+        {
+          "word": "far?",
+          "start": 22.804375,
+          "end": 23.256375
+        }
+      ],
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "transcript_with_tool_calls": [
+    {
+      "role": "agent",
+      "content": "Hello, Sam. This is Chloe from Retell Real Estate company. Am I catching you at a good time?",
+      "words": [
+        {
+          "word": "Hello, ",
+          "start": 0.797,
+          "end": 1.111
+        },
+        {
+          "word": "Sam.",
+          "start": 1.111,
+          "end": 1.61
+        },
+        {
+          "word": " This ",
+          "start": 1.655791748046875,
+          "end": 1.841791748046875
+        },
+        {
+          "word": "is ",
+          "start": 1.841791748046875,
+          "end": 1.957791748046875
+        },
+        {
+          "word": "Chloe ",
+          "start": 1.957791748046875,
+          "end": 2.317791748046875
+        },
+        {
+          "word": "from ",
+          "start": 2.317791748046875,
+          "end": 2.573791748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 2.573791748046875,
+          "end": 2.944791748046875
+        },
+        {
+          "word": "Real ",
+          "start": 2.944791748046875,
+          "end": 3.153791748046875
+        },
+        {
+          "word": "Estate ",
+          "start": 3.153791748046875,
+          "end": 3.467791748046875
+        },
+        {
+          "word": "company.",
+          "start": 3.467791748046875,
+          "end": 4.117791748046875
+        },
+        {
+          "word": " Am ",
+          "start": 4.163541748046875,
+          "end": 4.326541748046875
+        },
+        {
+          "word": "I ",
+          "start": 4.326541748046875,
+          "end": 4.407541748046875
+        },
+        {
+          "word": "catching ",
+          "start": 4.407541748046875,
+          "end": 4.697541748046875
+        },
+        {
+          "word": "you ",
+          "start": 4.697541748046875,
+          "end": 4.802541748046875
+        },
+        {
+          "word": "at ",
+          "start": 4.802541748046875,
+          "end": 4.883541748046875
+        },
+        {
+          "word": "a ",
+          "start": 4.883541748046875,
+          "end": 4.941541748046875
+        },
+        {
+          "word": "good ",
+          "start": 4.941541748046875,
+          "end": 5.081541748046875
+        },
+        {
+          "word": "time?",
+          "start": 5.081541748046875,
+          "end": 5.464541748046875
+        }
+      ],
+      "metadata": {
+        "response_id": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hey. Yes. You are. How are you doing?",
+      "words": [
+        {
+          "word": "Hey. ",
+          "start": 7.92,
+          "end": 8.4
+        },
+        {
+          "word": "Yes. ",
+          "start": 8.4,
+          "end": 8.64
+        },
+        {
+          "word": "You ",
+          "start": 8.64,
+          "end": 8.88
+        },
+        {
+          "word": "are. ",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "word": "How ",
+          "start": 9.2,
+          "end": 9.44
+        },
+        {
+          "word": "are ",
+          "start": 9.44,
+          "end": 9.6
+        },
+        {
+          "word": "you ",
+          "start": 9.6,
+          "end": 9.68
+        },
+        {
+          "word": "doing?",
+          "start": 9.68,
+          "end": 9.7599997
+        }
+      ]
+    },
+    {
+      "role": "agent",
+      "content": "I’m doing great, thanks for asking! I’m reaching out because you recently showed interest in 524 Retell Lane in Palo Alto, near Stanford. I wanted to see how I can help you further. What are your thoughts on the property so far?",
+      "words": [
+        {
+          "word": "I’m ",
+          "start": 11.264,
+          "end": 11.496
+        },
+        {
+          "word": "doing ",
+          "start": 11.496,
+          "end": 11.716
+        },
+        {
+          "word": "great, ",
+          "start": 11.716,
+          "end": 11.96
+        },
+        {
+          "word": "thanks ",
+          "start": 11.96,
+          "end": 12.251
+        },
+        {
+          "word": "for ",
+          "start": 12.251,
+          "end": 12.401
+        },
+        {
+          "word": "asking!",
+          "start": 12.401,
+          "end": 13.04
+        },
+        {
+          "word": " I’m ",
+          "start": 13.086041748046876,
+          "end": 13.353041748046875
+        },
+        {
+          "word": "reaching ",
+          "start": 13.353041748046875,
+          "end": 13.644041748046876
+        },
+        {
+          "word": "out ",
+          "start": 13.644041748046876,
+          "end": 13.806041748046875
+        },
+        {
+          "word": "because ",
+          "start": 13.806041748046875,
+          "end": 14.050041748046874
+        },
+        {
+          "word": "you ",
+          "start": 14.050041748046874,
+          "end": 14.189041748046876
+        },
+        {
+          "word": "recently ",
+          "start": 14.189041748046876,
+          "end": 14.607041748046875
+        },
+        {
+          "word": "showed ",
+          "start": 14.607041748046875,
+          "end": 14.863041748046875
+        },
+        {
+          "word": "interest ",
+          "start": 14.863041748046875,
+          "end": 15.258041748046875
+        },
+        {
+          "word": "in ",
+          "start": 15.258041748046875,
+          "end": 15.397041748046876
+        },
+        {
+          "word": "524 ",
+          "start": 15.397041748046876,
+          "end": 15.699041748046875
+        },
+        {
+          "word": "Retell ",
+          "start": 15.699041748046875,
+          "end": 16.035041748046876
+        },
+        {
+          "word": "Lane ",
+          "start": 16.035041748046876,
+          "end": 16.186041748046875
+        },
+        {
+          "word": "in ",
+          "start": 16.186041748046875,
+          "end": 16.500041748046876
+        },
+        {
+          "word": "Palo ",
+          "start": 16.500041748046876,
+          "end": 16.836041748046874
+        },
+        {
+          "word": "Alto, ",
+          "start": 16.836041748046874,
+          "end": 17.301041748046874
+        },
+        {
+          "word": "near ",
+          "start": 17.301041748046874,
+          "end": 17.614041748046876
+        },
+        {
+          "word": "Stanford.",
+          "start": 17.614041748046876,
+          "end": 17.754041748046873
+        },
+        {
+          "word": " I ",
+          "start": 19.541208251953126,
+          "end": 19.646208251953126
+        },
+        {
+          "word": "wanted ",
+          "start": 19.646208251953126,
+          "end": 19.843208251953126
+        },
+        {
+          "word": "to ",
+          "start": 19.843208251953126,
+          "end": 19.913208251953126
+        },
+        {
+          "word": "see ",
+          "start": 19.913208251953126,
+          "end": 20.041208251953126
+        },
+        {
+          "word": "how ",
+          "start": 20.041208251953126,
+          "end": 20.168208251953125
+        },
+        {
+          "word": "I ",
+          "start": 20.168208251953125,
+          "end": 20.238208251953125
+        },
+        {
+          "word": "can ",
+          "start": 20.238208251953125,
+          "end": 20.366208251953125
+        },
+        {
+          "word": "help ",
+          "start": 20.366208251953125,
+          "end": 20.563208251953125
+        },
+        {
+          "word": "you ",
+          "start": 20.563208251953125,
+          "end": 20.702208251953124
+        },
+        {
+          "word": "further.",
+          "start": 20.702208251953124,
+          "end": 21.306208251953127
+        },
+        {
+          "word": " What ",
+          "start": 21.329375,
+          "end": 21.515375
+        },
+        {
+          "word": "are ",
+          "start": 21.515375,
+          "end": 21.619375
+        },
+        {
+          "word": "your ",
+          "start": 21.619375,
+          "end": 21.747375
+        },
+        {
+          "word": "thoughts ",
+          "start": 21.747375,
+          "end": 22.026375
+        },
+        {
+          "word": "on ",
+          "start": 22.026375,
+          "end": 22.130375
+        },
+        {
+          "word": "the ",
+          "start": 22.130375,
+          "end": 22.223375
+        },
+        {
+          "word": "property ",
+          "start": 22.223375,
+          "end": 22.630375
+        },
+        {
+          "word": "so ",
+          "start": 22.630375,
+          "end": 22.804375
+        },
+        {
+          "word": "far?",
+          "start": 22.804375,
+          "end": 23.256375
+        }
+      ],
+      "metadata": {
+        "response_id": 3
+      }
+    }
+  ],
+  "recording_url": "https://dxc03zgurdly9.cloudfront.net/9105f4e28c9aafbd2285676069d8f4860ad7f82022bb9f787155da91ba54dd79/recording.wav",
+  "public_log_url": "https://dxc03zgurdly9.cloudfront.net/9105f4e28c9aafbd2285676069d8f4860ad7f82022bb9f787155da91ba54dd79/public.log",
+  "disconnection_reason": "user_hangup",
+  "latency": {
+    "llm": {
+      "p99": 912.25,
+      "min": 442,
+      "max": 917,
+      "p90": 869.5,
+      "num": 2,
+      "values": [
+        442,
+        917
+      ],
+      "p50": 679.5,
+      "p95": 893.25
+    },
+    "e2e": {
+      "p99": 1376.000244140625,
+      "min": 1376.000244140625,
+      "max": 1376.000244140625,
+      "p90": 1376.000244140625,
+      "num": 1,
+      "values": [
+        1376.000244140625
+      ],
+      "p50": 1376.000244140625,
+      "p95": 1376.000244140625
+    },
+    "tts": {
+      "p99": 329.08,
+      "min": 238,
+      "max": 330,
+      "p90": 320.8,
+      "num": 2,
+      "values": [
+        238,
+        330
+      ],
+      "p50": 284,
+      "p95": 325.4
+    }
+  },
+  "call_cost": {
+    "total_duration_unit_price": 0.1916667,
+    "product_costs": [
+      {
+        "unit_price": 0.1166667,
+        "product": "elevenlabs_tts",
+        "cost": 2.9166667
+      },
+      {
+        "unit_price": 0.075,
+        "product": "gpt_4_1",
+        "cost": 1.875
+      }
+    ],
+    "combined_cost": 4.7916667,
+    "total_duration_seconds": 25
+  },
+  "call_analysis": {
+    "in_voicemail": false,
+    "call_summary": "The agent, Chloe from Retell Real Estate, contacted the user, Sam, to discuss their interest in a property located at 524 Retell Lane in Palo Alto. Chloe inquired about Sam's thoughts on the property and offered assistance in the next steps.",
+    "user_sentiment": "Positive",
+    "custom_analysis_data": {},
+    "call_successful": false
+  },
+  "opt_out_sensitive_data_storage": false,
+  "opt_in_signed_url": false,
+  "llm_token_usage": {
+    "values": [
+      671,
+      691,
+      691,
+      696
+    ],
+    "average": 687.25,
+    "num_requests": 4
+  },
+  "access_token": "eyJhbGciOiJIUzI1NiJ9.eyJ2aWRlbyI6eyJyb29tSm9pbiI6dHJ1ZSwicm9vbSI6IndlYl9jYWxsXzVmOTEzY2Q2YTA3NjE3MmYzN2Q3ZTlmNjJlYiJ9LCJpc3MiOiJBUElqWGZBMzVHTmM3WHgiLCJleHAiOjE3NDkxMTk3OTAsIm5iZiI6MCwic3ViIjoiY2xpZW50In0.Rt8w-A8EJCCg_71bcLjCALJ5FBpdmfRFKlSE1-4X8lk"
+}
+   ] 
+}
