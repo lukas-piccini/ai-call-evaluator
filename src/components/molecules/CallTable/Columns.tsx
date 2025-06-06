@@ -28,7 +28,7 @@ export const columns: ColumnDef<Retell.Call.CallResponse>[] = [
   },
   {
     accessorKey: "feedback",
-    header: () => <div className="font-bold">Feedback</div>
+    header: () => <div className="font-bold">Feedback Status</div>
   },
   {
     accessorKey: "Actions",

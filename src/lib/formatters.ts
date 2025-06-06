@@ -11,8 +11,8 @@ function unixToTimestamp(unix: string): string {
   return formatter.format(date)
 }
 
-function msToDuration(ms: number): string {
-  if (ms <= 0) return "00:00"
+function msToDuration(ms?: number): string {
+  if (typeof ms === 'undefined' || ms <= 0) return "00:00"
 
   const minutes = Math.floor((ms / 1000) / 60)
   const seconds = Math.floor((ms / 1000) % 60)
