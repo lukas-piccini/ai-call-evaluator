@@ -13,8 +13,8 @@ export function Actions({ callId, audioUrl }: ActionsProps) {
 
   return (
     <div className="flex gap-2">
-      <Button variant={"ghost"} onClick={() => { setCurrentAudio({ audio_url: audioUrl, call_id: callId }) }}><Play {...currentAudio?.call_id === callId ? { color: "green", strokeWidth: 3 } : {}} /></Button>
-      <Button variant={"ghost"} asChild>
+      <Button variant={"ghost"} aria-label="Play audio" onClick={() => { setCurrentAudio({ audio_url: audioUrl, call_id: callId }) }}><Play {...currentAudio?.call_id === callId ? { color: "green", strokeWidth: 3 } : {}} /></Button>
+      <Button variant={"ghost"} aria-label="Call details" asChild>
         <Link to="/" search={{ call_id: callId }}>
           <MessageSquare />
         </Link>

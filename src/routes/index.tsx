@@ -11,7 +11,8 @@ import { z } from "zod"
 import { CallModal } from '@/components/molecules/CallModal/CallModal';
 
 const homeSearchSchema = z.object({
-  call_id: fallback(z.string(), '').default('')
+  call_id: fallback(z.string(), '').default(''),
+  selected_message: fallback(z.string(), '').default('')
 })
 
 export const Route = createFileRoute('/')({

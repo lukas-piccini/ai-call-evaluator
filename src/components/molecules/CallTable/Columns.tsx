@@ -6,33 +6,33 @@ import { msToDuration, unixToTimestamp } from "@/lib/formatters";
 export const columns: ColumnDef<Retell.Call.CallResponse>[] = [
   {
     accessorKey: "start_timestamp",
-    header: () => <div className="font-bold">Timestamp</div>,
+    header: () => <span className="font-bold">Timestamp</span>,
     cell: ({ row }) => {
       return <span>{unixToTimestamp(row.getValue("start_timestamp"))}</span>
     }
   },
   {
     accessorKey: "agent_id",
-    header: () => <div className="font-bold">Agent ID</div>
+    header: () => <span className="font-bold">Agent ID</span>
   },
   {
     accessorKey: "call_analysis.user_sentiment",
-    header: () => <div className="font-bold">Sentiment</div>
+    header: () => <span className="font-bold">Sentiment</span>
   },
   {
     accessorKey: "duration_ms",
-    header: () => <div className="font-bold">Duration</div>,
+    header: () => <span className="font-bold">Duration</span>,
     cell: ({ row }) => {
       return <span>{msToDuration(row.getValue("duration_ms"))}</span>
     }
   },
   {
     accessorKey: "feedback",
-    header: () => <div className="font-bold">Feedback Status</div>
+    header: () => <span className="font-bold">Feedback Status</span>
   },
   {
     accessorKey: "Actions",
-    header: () => <div className="font-bold">Actions</div>,
+    header: () => <span className="font-bold">Actions</span>,
     cell: ({ row }) => {
       return <Actions audioUrl={row.original.recording_url || ""} callId={row.original.call_id || ""} />
     }
