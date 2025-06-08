@@ -23,7 +23,7 @@ export async function getCall(callId: string): Promise<Retell.Call.CallResponse>
   })
 }
 
-export async function updateCall(callId: string, data: Feedback, messageId: string): Promise<Retell.Call.CallResponse> {
+export async function updateCall(callId: string, data: Feedback, messageId: string, metadata: Record<string, Feedback>): Promise<Retell.Call.CallResponse> {
   return await new Promise((resolve, reject) => {
     setTimeout(async () => {
       try {
@@ -32,7 +32,7 @@ export async function updateCall(callId: string, data: Feedback, messageId: stri
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({ metadata: { [messageId]: data } })
+          body: JSON.stringify({ metadata: { ...metadata, [messageId]: data } })
         })
         const call: Retell.Call.CallResponse = await response.json()
 

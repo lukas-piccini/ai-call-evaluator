@@ -8,6 +8,7 @@ import { fallback, zodValidator } from "@tanstack/zod-adapter"
 import { z } from "zod"
 import { CallModal } from '@/components/molecules/CallModal/CallModal';
 import { getCalls } from '@/services/call';
+import { CallChart } from '@/components/molecules/CallChart/CallChart';
 
 const homeSearchSchema = z.object({
   call_id: fallback(z.string(), '').default(''),
@@ -26,8 +27,11 @@ function HomeComponent() {
   console.log(data, isError)
 
   return (
-    <div className="p-2">
-      <CallTable isLoading={isLoading} data={data || []} />
+    <div className="flex flex-col py-8 px-4 md:px-10 gap-8">
+      <div className="flex flex-col gap-10">
+        <CallChart isLoading={isLoading} data={data || []} />
+        <CallTable isLoading={isLoading} data={data || []} />
+      </div>
       <CallModal />
       <AudioPlayer />
     </div>

@@ -31,8 +31,16 @@ function msToDuration(ms?: number): string {
   return `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
 }
 
+function msToSeconds(ms?: number): string {
+  if (typeof ms === 'undefined' || ms <= 0) return "00.0"
+
+  const seconds = (ms / 1000)
+
+  return seconds.toFixed(1).toString()
+}
+
 function getMessageDateTime(conversationStart: number, messageTime: number) {
   return unixToHour(Math.floor(conversationStart + messageTime))
 }
 
-export { unixToTimestamp, msToDuration, getMessageDateTime }
+export { unixToTimestamp, msToDuration, getMessageDateTime, msToSeconds }

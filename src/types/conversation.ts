@@ -34,7 +34,7 @@ export enum FeedbackStatus {
 }
 
 export interface ConversationFeedbackFormProps {
-  metadata?: Record<string, Feedback>;
+  metadata: Record<string, Feedback>;
 }
 
 

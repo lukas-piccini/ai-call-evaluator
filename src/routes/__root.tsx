@@ -17,7 +17,9 @@ function RootComponent() {
       <QueryClientProvider client={queryClient}>
         <div className='font-mono'>
           <Header />
-          <Outlet />
+          <div className='mx-auto max-w-[1024px]'>
+            <Outlet />
+          </div>
           <Toaster />
         </div>
       </QueryClientProvider>

@@ -6715,9 +6715,17 @@
       "comment": "trying to update really",
       "rating": "3",
       "metadata": {
+        "7.773": {
+          "comment": "testing in a new message",
+          "rating": "5"
+        },
         "0.883": {
-          "comment": "i really like this",
+          "comment": "im writing my feedback here 123",
           "rating": "4"
+        },
+        "22.283": {
+          "comment": "what about this one",
+          "rating": "5"
         }
       },
       "metadata.0.883": {

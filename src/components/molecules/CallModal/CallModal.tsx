@@ -56,12 +56,12 @@ export function CallModal() {
 
             <div className="flex gap-4">
               <div className="flex items-center gap-2">
-                <span className="text-sm italic text-gray-500">Sentiment:</span>
+                <span className="text-sm italic text-gray-500 dark:text-white">Sentiment:</span>
                 <Badge asChild={isLoading}>{isLoading ? <Skeleton width={50} height={15} /> : data?.call_analysis?.user_sentiment}</Badge>
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="text-sm italic text-gray-500">Status:</span>
+                <span className="text-sm italic text-gray-500 dark:text-white">Status:</span>
                 <Badge asChild={isLoading}>{isLoading ? <Skeleton width={50} height={15} /> : getFeedbackStatus(ids, data?.metadata as Feedback[] | undefined)}</Badge>
               </div>
             </div>
@@ -94,7 +94,7 @@ export function CallModal() {
 
           <div className="flex flex-col">
             <p className="font-bold text-md">Conversation</p>
-            <p className="text-sm text-gray-600">You can click on a message and give feedback to it.</p>
+            <p className="text-sm text-gray-600 dark:text-white italic">You can click on a message and give feedback to it.</p>
           </div>
 
           <section className="bg-slate-100 dark:bg-zinc-900 p-4 rounded-lg h-full overflow-auto">

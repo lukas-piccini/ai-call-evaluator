@@ -47,6 +47,8 @@ function ConversationFeedbackForm({ metadata }: ConversationFeedbackFormProps) {
 
   const feedback = getFeedbackForCurrentMessage(metadata, selectedMessage)
 
+  console.log(feedback)
+
   const form = useForm<z.infer<typeof FeedbackFormSchema>>({
     resolver: zodResolver(FeedbackFormSchema),
     defaultValues: {
@@ -59,7 +61,7 @@ function ConversationFeedbackForm({ metadata }: ConversationFeedbackFormProps) {
   const queryClient = useQueryClient()
   const { mutate, isPending } = useMutation({
     mutationFn: ({ data }: { data: Feedback }) => {
-      return updateCall(callId, data, selectedMessage)
+      return updateCall(callId, data, selectedMessage, metadata)
     },
     onSuccess: () => {
       toast.success("Feedback sent successfully")
@@ -73,6 +75,7 @@ function ConversationFeedbackForm({ metadata }: ConversationFeedbackFormProps) {
   })
 
   const hasChanged = form.formState.isDirty
+  const submitDisabled = !hasChanged || isPending
 
   useEffect(() => {
     if (dirty !== hasChanged)
@@ -130,7 +133,7 @@ function ConversationFeedbackForm({ metadata }: ConversationFeedbackFormProps) {
             )}
           />
 
-          <Button size="sm" type="submit" disabled={!hasChanged || isPending}>{isPending ? <LoaderIcon className="animate-spin" /> : "Save"}</Button>
+          <Button size="sm" type="submit" disabled={submitDisabled} aria-disabled={submitDisabled}>{isPending ? <LoaderIcon className="animate-spin" /> : "Save"}</Button>
         </div>
       </form>
     </Form >
@@ -189,7 +192,7 @@ function ConversationMessage({ message, startDate, metadata }: ConversationMessa
         <AnimatePresence>
           {isSelected && (
             <motion.div key="feedback-controls" transition={{ y: { bounce: 0 } }} exit={{ opacity: 0, scale: 0, height: 0 }} initial={{ opacity: 0, scale: 0, height: 0 }} animate={{ opacity: 1, scale: 1, height: "auto" }}>
-              <ConversationFeedbackForm metadata={metadata} />
+              <ConversationFeedbackForm metadata={metadata as Record<string, Feedback>} />
             </motion.div>
           )}
         </AnimatePresence>
