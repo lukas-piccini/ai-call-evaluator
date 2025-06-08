@@ -1,7 +1,6 @@
 import { useNavigate, useSearch } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "motion/react";
 import { useCallback, useEffect, useRef } from "react";
-import { Retell } from "retell-sdk"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { getMessageDateTime } from "@/lib/formatters";
@@ -18,33 +17,16 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { useForm } from "react-hook-form";
+import { Rating } from "./rating";
+import { useFeedbackForm } from "@/stores/feedback-form";
 
-interface ConversationProps {
-  content: Retell.WebCallResponse.TranscriptObject[];
-  isLoading: boolean;
-  startDate: number;
-}
-
-interface ConversationMessageProps {
-  message: Retell.WebCallResponse.TranscriptObject;
-  startDate: number;
-}
-
-enum FeedbackTags {
-  INACCURATE_SENTIMENT = "Inaccurate sentiment",
-  CRITICAL_ISSUE = "Critical issue",
-  FOLLOWUP_NEEDED = "Followup needed"
-}
-
-interface Feedback {
-  comment?: string;
-  rating?: 1 | 2 | 3 | 4 | 5;
-  tags?: FeedbackTags[]
-}
-
-interface ConversationFeedbackFormProps {
-  feedback?: Feedback
-}
+import type { ConversationProps, ConversationMessageProps, ConversationFeedbackFormProps, Feedback } from "@/types/conversation";
+import { FeedbackTags } from "@/types/conversation";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { updateCall } from "@/services/call";
+import { toast } from "sonner";
+import { LoaderIcon } from "lucide-react";
+import { getFeedbackForCurrentMessage } from "@/lib/utils";
 
 const FeedbackFormSchema = z.object({
   comment: z.string({
@@ -52,11 +34,19 @@ const FeedbackFormSchema = z.object({
   }).min(5, {
     message: "Comment must be atleast 5 characters.",
   }),
-  rating: z.number().gte(1).lte(5).optional(),
+  rating: z.enum(["0", "1", "2", "3", "4", "5"], {
+    required_error: "Rating is required."
+  }),
   tags: z.array(z.nativeEnum(FeedbackTags)).optional()
 })
 
-function ConversationFeedbackForm({ feedback }: ConversationFeedbackFormProps) {
+function ConversationFeedbackForm({ metadata }: ConversationFeedbackFormProps) {
+  const [callId, selectedMessage] = useSearch({ from: "/", select: (search) => ([search.call_id, search.selected_message]) })
+  const { dirty, setDirty } = useFeedbackForm(state => state)
+  const navigate = useNavigate()
+
+  const feedback = getFeedbackForCurrentMessage(metadata, selectedMessage)
+
   const form = useForm<z.infer<typeof FeedbackFormSchema>>({
     resolver: zodResolver(FeedbackFormSchema),
     defaultValues: {
@@ -66,15 +56,67 @@ function ConversationFeedbackForm({ feedback }: ConversationFeedbackFormProps) {
     }
   })
 
+  const queryClient = useQueryClient()
+  const { mutate, isPending } = useMutation({
+    mutationFn: ({ data }: { data: Feedback }) => {
+      return updateCall(callId, data, selectedMessage)
+    },
+    onSuccess: () => {
+      toast.success("Feedback sent successfully")
+      queryClient.invalidateQueries({ queryKey: ["call", callId] })
+      navigate({ to: "/", search: (old) => ({ ...old, selected_message: undefined }), replace: true })
+    },
+    onError: () => {
+      toast.error("Error sending your feedback. Try again later.")
+    },
+    retry: false
+  })
+
+  const hasChanged = form.formState.isDirty
+
+  useEffect(() => {
+    if (dirty !== hasChanged)
+      setDirty(hasChanged)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hasChanged])
+
+  useEffect(() => {
+    return () => {
+      setDirty(false)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   function onSubmit(data: z.infer<typeof FeedbackFormSchema>) {
+    if (!hasChanged) return;
+
     console.log(data)
+    mutate({ data })
   }
 
   return (
     <Form {...form}>
       <form name="feedback-form" id="feedback-form" onSubmit={form.handleSubmit(onSubmit)} onClick={e => e.stopPropagation()}>
-        <Separator className="my-2" />
+        <Separator className="my-4" />
+
         <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between">
+            <span className="text-sm italic text-gray-600 dark:text-white">Feedback</span>
+
+            <FormField
+              control={form.control}
+              name="rating"
+              render={({ field }) => (
+                <FormItem >
+                  <FormControl>
+                    <Rating {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
           <FormField
             control={form.control}
             name="comment"
@@ -88,16 +130,19 @@ function ConversationFeedbackForm({ feedback }: ConversationFeedbackFormProps) {
             )}
           />
 
-          <Button size="sm" type="submit">Save</Button>
+          <Button size="sm" type="submit" disabled={!hasChanged || isPending}>{isPending ? <LoaderIcon className="animate-spin" /> : "Save"}</Button>
         </div>
       </form>
     </Form >
   )
 }
 
-function ConversationMessage({ message, startDate }: ConversationMessageProps) {
+function ConversationMessage({ message, startDate, metadata }: ConversationMessageProps) {
   const navigate = useNavigate()
   const selectedMessage = useSearch({ from: "/", select: (search) => search.selected_message })
+  const { dirty } = useFeedbackForm(state => state)
+
+  //const currentFeedback = getFeedbackForCurrentMessage(metadata, selectedMessage)
   const isUser = message.role === "user";
   const isSelected = selectedMessage === message.words[0].start?.toString()
   const ref = useRef<HTMLDivElement | null>(null)
@@ -105,8 +150,13 @@ function ConversationMessage({ message, startDate }: ConversationMessageProps) {
   const onClickMessage = useCallback((message: number) => {
     const newSelectedMessage = isSelected ? undefined : message.toString()
 
+    if (dirty) {
+      if (!confirm("You have unsaved changes. Do you really want to close this feedback?"))
+        return
+    }
+
     navigate({ to: "/", search: (old) => ({ ...old, selected_message: newSelectedMessage }), replace: true })
-  }, [navigate, isSelected])
+  }, [navigate, isSelected, dirty])
 
   useEffect(() => {
     if (!ref.current) return;
@@ -116,7 +166,7 @@ function ConversationMessage({ message, startDate }: ConversationMessageProps) {
   }, [])
 
   return (
-    <motion.div className={`flex ${isUser ? "justify-end" : "justify-start"} text-sm`}>
+    <div className={`flex ${isUser ? "justify-end" : "justify-start"} text-sm`}>
       <div
         role="button"
         aria-roledescription="Message feedback"
@@ -135,16 +185,16 @@ function ConversationMessage({ message, startDate }: ConversationMessageProps) {
           <span className="font-bold">{isUser ? "User" : "Agent"}</span>
           <span className="text-xs text-gray-500">{getMessageDateTime(startDate, (message.words[0].start || 0) * 1000)}</span>
         </div>
-        <p className={``}>{message.content}</p>
+        <p>{message.content}</p>
         <AnimatePresence>
           {isSelected && (
-            <motion.div key="feedback-constrols" exit={{ opacity: 0, scale: 0, height: 0 }} initial={{ opacity: 0, scale: 0, height: 0 }} animate={{ opacity: 1, scale: 1, height: "auto" }}>
-              <ConversationFeedbackForm feedback={{ comment: "I really like this interation" }} />
+            <motion.div key="feedback-controls" transition={{ y: { bounce: 0 } }} exit={{ opacity: 0, scale: 0, height: 0 }} initial={{ opacity: 0, scale: 0, height: 0 }} animate={{ opacity: 1, scale: 1, height: "auto" }}>
+              <ConversationFeedbackForm metadata={metadata} />
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -153,15 +203,15 @@ export function Conversation({ content, isLoading, startDate }: ConversationProp
     return <Skeleton count={10} />
   }
 
-  if (content.length === 0) {
+  if (content?.transcript_object?.length === 0) {
     return <p>No messages.</p>
   }
 
   return (
     <div className="flex flex-col gap-2">
-      {content.map(message => {
+      {content?.transcript_object?.map(message => {
         return (
-          <ConversationMessage key={message.words[0].start} startDate={startDate} message={message} />
+          <ConversationMessage key={message.words[0].start} metadata={content.metadata} startDate={startDate} message={message} />
         )
       })}
     </div>

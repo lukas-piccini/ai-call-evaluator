@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { ThemeProvider } from '@/components/theme-provider'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { Header } from '@/components/ui/header'
+import { Toaster } from '@/components/ui/sonner'
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -17,6 +18,7 @@ function RootComponent() {
         <div className='font-mono'>
           <Header />
           <Outlet />
+          <Toaster />
         </div>
       </QueryClientProvider>
     </ThemeProvider>

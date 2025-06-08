@@ -2,9 +2,7 @@
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
-  DialogClose,
   DialogContent,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
@@ -18,18 +16,11 @@ import { useAudioStore } from "@/stores/audio"
 import Skeleton from "react-loading-skeleton"
 import { Conversation } from "@/components/ui/conversation"
 import { Separator } from "@/components/ui/separator"
+import { Badge } from "@/components/ui/badge"
+import { getFeedbackStatus, getIdsFromTranscript } from "@/lib/utils"
+import type { Feedback } from "@/types/conversation"
+import { getCall } from "@/services/call"
 
-async function getCall(callId: string): Promise<Retell.Call.CallResponse> {
-  return await new Promise((resolve) => {
-    setTimeout(async () => {
-      const response = await fetch(`${import.meta.env.VITE_CALLS_API_URL}?call_id=${callId}`)
-      const calls: Retell.Call.CallResponse[] = await response.json()
-
-      if (calls.length >= 1)
-        resolve(calls[0])
-    }, 2000)
-  })
-}
 
 export function CallModal() {
   const navigate = useNavigate()
@@ -37,6 +28,7 @@ export function CallModal() {
   const callId = useSearch({ from: '/', select: (search) => search.call_id })
   const { data, isError, isLoading } = useQuery({ queryKey: ['call', callId], queryFn: () => getCall(callId), enabled: !!callId })
   const isPlayingAudio = currentAudio?.call_id === callId
+  const ids = getIdsFromTranscript(data?.transcript_object as Retell.Call.WebCallResponse.TranscriptObject[])
 
   const onCloseModal = useCallback((isOpen: boolean) => {
     if (!isOpen)
@@ -51,14 +43,30 @@ export function CallModal() {
 
   return (
     <Dialog open={!!callId} onOpenChange={onCloseModal}>
-      <DialogContent className="sm:max-w-[1000px] sm:max-h-[90dvh] overflow-y-auto" onInteractOutside={event => event.preventDefault()}>
+      <DialogContent className="sm:max-w-[1000px] max-h-[90dvh] overflow-y-auto" onInteractOutside={event => event.preventDefault()}>
         <DialogHeader>
           <DialogTitle>Call details</DialogTitle>
         </DialogHeader>
 
         <Separator />
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 px-1 md:px-4">
+          <div>
+            <p className="font-bold text-md">Basic information</p>
+
+            <div className="flex gap-4">
+              <div className="flex items-center gap-2">
+                <span className="text-sm italic text-gray-500">Sentiment:</span>
+                <Badge asChild={isLoading}>{isLoading ? <Skeleton width={50} height={15} /> : data?.call_analysis?.user_sentiment}</Badge>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <span className="text-sm italic text-gray-500">Status:</span>
+                <Badge asChild={isLoading}>{isLoading ? <Skeleton width={50} height={15} /> : getFeedbackStatus(ids, data?.metadata as Feedback[] | undefined)}</Badge>
+              </div>
+            </div>
+          </div>
+
           <section className="flex flex-col gap-2 sm:flex-row sm:justify-between bg-slate-100 dark:bg-zinc-900 p-4 rounded-lg">
             <div className="flex flex-col text-sm gap-1">
               <div className="flex gap-1">
@@ -84,16 +92,15 @@ export function CallModal() {
 
           <Separator />
 
+          <div className="flex flex-col">
+            <p className="font-bold text-md">Conversation</p>
+            <p className="text-sm text-gray-600">You can click on a message and give feedback to it.</p>
+          </div>
+
           <section className="bg-slate-100 dark:bg-zinc-900 p-4 rounded-lg h-full overflow-auto">
-            <Conversation startDate={data?.start_timestamp || 0} isLoading={isLoading} content={data?.transcript_object || []} />
+            <Conversation startDate={data?.start_timestamp || 0} isLoading={isLoading} content={data} />
           </section>
         </div>
-        <DialogFooter>
-          <DialogClose asChild>
-            <Button variant="outline">Cancel</Button>
-          </DialogClose>
-          <Button>Save changes</Button>
-        </DialogFooter>
       </DialogContent >
     </Dialog >
   )
