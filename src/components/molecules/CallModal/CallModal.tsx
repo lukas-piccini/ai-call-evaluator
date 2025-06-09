@@ -63,7 +63,7 @@ export function CallModal() {
 
               <div className="flex items-center gap-2">
                 <span className="text-sm italic text-gray-500 dark:text-white">Status:</span>
-                {isLoading ? <Skeleton width={50} height={15} /> : <FeedbackBadge feedback={getFeedbackStatus(ids, data?.metadata as Feedback[] | undefined)} />}
+                {isLoading ? <Skeleton width={50} height={15} /> : <FeedbackBadge feedback={getFeedbackStatus(ids, data?.metadata as Record<string, Feedback[]> | undefined)} />}
               </div>
             </div>
           </div>
