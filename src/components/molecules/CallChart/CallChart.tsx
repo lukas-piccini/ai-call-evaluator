@@ -3,9 +3,6 @@ import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts"
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 
 import {
@@ -18,6 +15,7 @@ import type { CallResponse } from "retell-sdk/resources/call.mjs"
 import { getChartData, getLast24HoursCalls, getSentimentAnalytics } from "@/lib/aggregator"
 import { CallSentimentCard } from "../CallSentimentCard/CallSentimentCard"
 import { ChartSpline, Clock, Timer } from "lucide-react"
+import { useMemo } from "react"
 
 const chartConfig = {
   positive: {
@@ -40,9 +38,9 @@ interface CallChartProps {
 }
 
 export function CallChart({ data, isLoading }: CallChartProps) {
-  const last24hCalls = getLast24HoursCalls(data)
-  const analytics = getSentimentAnalytics(last24hCalls)
-  const chartData = getChartData(last24hCalls)
+  const last24hCalls = useMemo(() => getLast24HoursCalls(data), [data])
+  const analytics = useMemo(() => getSentimentAnalytics(last24hCalls), [last24hCalls])
+  const chartData = useMemo(() => getChartData(last24hCalls), [last24hCalls])
 
   console.log("last", last24hCalls)
 
@@ -93,9 +91,10 @@ export function CallChart({ data, isLoading }: CallChartProps) {
                 dataKey="hour"
                 tickLine={false}
                 tickMargin={8}
+                tickFormatter={(value) => `${value.toString().padStart(2, "0")}:00`}
               />
               <YAxis
-                tickLine={false}
+                tickLine={true}
                 tickMargin={8}
               />
               <ChartTooltip cursor={false} content={<ChartTooltipContent />} />

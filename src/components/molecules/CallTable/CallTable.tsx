@@ -1,6 +1,8 @@
 import {
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table"
 
@@ -16,10 +18,14 @@ import {
 import Skeleton from "react-loading-skeleton"
 
 import { columns } from "./Columns"
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 import type Retell from "retell-sdk"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 export function CallTable({ isLoading, data }: { isLoading: boolean, data: Retell.Call.CallResponse[] }) {
+  // eslint-disable-next-line
+  const [globalFilter, setGlobalFilter] = useState<any>([])
   const finalData = useMemo(() => {
     return isLoading ? Array(10).fill({}) : data
   }, [isLoading, data])
@@ -39,13 +45,32 @@ export function CallTable({ isLoading, data }: { isLoading: boolean, data: Retel
     data: finalData,
     columns: finalColumns,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    globalFilterFn: "includesString",
+    onGlobalFilterChange: setGlobalFilter,
+    getFilteredRowModel: getFilteredRowModel(),
+    state: {
+      globalFilter
+    }
   })
 
   return (
     <div className="flex flex-col flex-1 basis-auto gap-2 overflow-auto">
-      <div>
-        <p className="text-2xl font-bold">Call History</p>
-        <p className="text-sm italic">A list of all recent calls</p>
+      <div className="flex justify-between">
+        <div>
+          <p className="text-2xl font-bold">Call History</p>
+          <p className="text-sm italic">A list of all recent calls</p>
+        </div>
+        <div className="flex items-end">
+          <Input
+            placeholder="Search calls"
+            value={globalFilter}
+            onChange={(event) =>
+              table.setGlobalFilter(String(event.target.value))
+            }
+            className="max-w-sm"
+          />
+        </div>
       </div>
       <div className="bg-card shadow-sm rounded-md border ">
         <Table>
@@ -90,6 +115,25 @@ export function CallTable({ isLoading, data }: { isLoading: boolean, data: Retel
             )}
           </TableBody>
         </Table>
+        <div className="flex items-center justify-end space-x-2 py-4">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            Previous
+          </Button>
+          <p className="text-sm">Page {(table.options.state.pagination?.pageIndex || 0) + 1} / {table.getPageCount()}</p>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          >
+            Next
+          </Button>
+        </div>
       </div>
     </div>
   )

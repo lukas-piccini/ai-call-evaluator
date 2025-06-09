@@ -7,6 +7,12 @@ interface SentimentAnalytics {
   sentimentScore: string;
 }
 
+interface BaseChartData {
+  positive: number;
+  neutral: number;
+  negative: number;
+}
+
 const USER_SENTIMENT_SCORE = {
   "Neutral": 6,
   "Positive": 10,
@@ -59,9 +65,29 @@ export function getSentimentAnalytics(data: CallResponse[]): SentimentAnalytics 
 }
 
 export function getChartData(data: CallResponse[]) {
+  const base = new Map<number, BaseChartData>()
   const currentHour = new Date().getHours()
-  const base = Array(24).fill(0).map((_, index) => ({ hour: (currentHour + index) % 24, negative: 0, neutral: 1, positive: 12 }));
 
-  console.log(currentHour)
-  return base
+  for (let i = 0; i < 24; i++) {
+    base.set((currentHour + i) % 24, { negative: 0, neutral: 0, positive: 0 })
+  }
+
+  data.forEach(call => {
+    if (!call.start_timestamp) return
+    const callHour = new Date(call.start_timestamp).getHours()
+
+    const prev = base.get(callHour)
+
+    if (!prev) return
+
+    if (call.call_analysis?.user_sentiment === 'Positive') {
+      base.set(callHour, { ...prev, positive: prev.positive + 1 })
+    } else if (call.call_analysis?.user_sentiment === 'Neutral') {
+      base.set(callHour, { ...prev, neutral: prev.neutral + 1 })
+    } else if (call.call_analysis?.user_sentiment === 'Negative') {
+      base.set(callHour, { ...prev, negative: prev.negative + 1 })
+    }
+  })
+
+  return Array.from(base, ([key, value]) => ({ hour: key, ...value }))
 }
