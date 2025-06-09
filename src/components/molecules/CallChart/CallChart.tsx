@@ -18,6 +18,9 @@ import { ChartSpline, Clock, Timer } from "lucide-react"
 import { useMemo } from "react"
 
 const chartConfig = {
+  title: {
+    label: "Calls",
+  },
   positive: {
     label: "Positive",
     color: "var(--chart-2)",
@@ -97,22 +100,22 @@ export function CallChart({ data, isLoading }: CallChartProps) {
                 tickLine={true}
                 tickMargin={8}
               />
-              <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+              <ChartTooltip cursor={true} content={<ChartTooltipContent labelKey="title" />} />
               <Line
                 dataKey="positive"
-                type="monotone"
+                type="linear"
                 stroke="var(--color-positive)"
                 strokeWidth={2}
               />
               <Line
                 dataKey="neutral"
-                type="monotone"
+                type="linear"
                 stroke="var(--color-neutral)"
                 strokeWidth={2}
               />
               <Line
                 dataKey="negative"
-                type="monotone"
+                type="linear"
                 stroke="var(--color-negative)"
                 strokeWidth={2}
               />

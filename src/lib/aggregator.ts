@@ -53,10 +53,17 @@ function getSentimentScore(data: CallResponse[]) {
     return acc + (USER_SENTIMENT_SCORE[call?.call_analysis?.user_sentiment || 'Unknown'])
   }, 0)
 
-  return (summ / data.length).toString()
+  return (summ / data.length).toFixed(1).toString()
 }
 
 export function getSentimentAnalytics(data: CallResponse[]): SentimentAnalytics {
+  if (!data || data.length === 0)
+    return {
+      avgCallDuration: '00:00',
+      avgLatency: '0.0',
+      sentimentScore: "0"
+    }
+
   return {
     avgCallDuration: getAvgCallDuration(data),
     avgLatency: getAvgLatency(data),
