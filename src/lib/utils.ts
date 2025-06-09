@@ -1,13 +1,13 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { Retell } from "retell-sdk"
+import type { Call } from "@/types/call"
 import { FeedbackStatus, type Feedback } from "@/types/conversation"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function getIdsFromTranscript(transcript: Retell.Call.WebCallResponse.TranscriptObject[]) {
+export function getIdsFromTranscript(transcript: Call.WebCallResponse.TranscriptObject[]) {
   if (!transcript) return []
   const ids = transcript.map(msg => {
     if (!msg.words[0] || !msg.words[0].start) return -1

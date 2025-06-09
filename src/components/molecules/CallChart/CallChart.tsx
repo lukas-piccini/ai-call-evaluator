@@ -11,7 +11,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
-import type { CallResponse } from "retell-sdk/resources/call.mjs"
+import type { CallResponse } from "@/types/call"
 import { getChartData, getLast24HoursCalls, getSentimentAnalytics } from "@/lib/aggregator"
 import { CallSentimentCard } from "../CallSentimentCard/CallSentimentCard"
 import { ChartSpline, Clock, Timer } from "lucide-react"

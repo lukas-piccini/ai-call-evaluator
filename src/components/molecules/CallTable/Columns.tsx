@@ -1,13 +1,13 @@
 import type { ColumnDef } from "@tanstack/react-table";
 import { Actions } from "@/components/ui/actions";
-import type Retell from "retell-sdk";
+import type { Call } from "@/types/call";
 import { msToDuration, unixToTimestamp } from "@/lib/formatters";
 import { SentimentBadge } from "../SentimentBadge/SentimentBadge";
 import { FeedbackBadge } from "../FeedbackBadge/FeedbackBage";
 import type { Feedback } from "@/types/conversation";
 import { getFeedbackStatus, getIdsFromTranscript } from "@/lib/utils";
 
-export const columns: ColumnDef<Retell.Call.CallResponse>[] = [
+export const columns: ColumnDef<Call.CallResponse>[] = [
   {
     accessorKey: "start_timestamp",
     header: () => <span className="font-bold">Timestamp</span>,
@@ -37,7 +37,7 @@ export const columns: ColumnDef<Retell.Call.CallResponse>[] = [
     accessorKey: "feedback",
     header: () => <span className="font-bold">Feedback Status</span>,
     cell: ({ row }) => {
-      const ids = getIdsFromTranscript(row.original?.transcript_object as Retell.Call.WebCallResponse.TranscriptObject[])
+      const ids = getIdsFromTranscript(row.original?.transcript_object as Call.WebCallResponse.TranscriptObject[])
       return <FeedbackBadge feedback={getFeedbackStatus(ids, row.original.metadata as Record<string, Feedback[]> | undefined)} />
     }
   },

@@ -1,4 +1,4 @@
-import type { CallResponse } from "retell-sdk/resources/call.mjs"
+import type { CallResponse } from "@/types/call";
 import { msToDuration, msToSeconds } from "./formatters"
 
 interface SentimentAnalytics {

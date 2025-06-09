@@ -9,7 +9,6 @@ import {
 import { useNavigate, useSearch } from "@tanstack/react-router"
 import { useCallback } from "react"
 import { useQuery } from "@tanstack/react-query"
-import { Retell } from "retell-sdk"
 import { msToDuration } from "@/lib/formatters"
 import { Play } from "lucide-react"
 import { useAudioStore } from "@/stores/audio"
@@ -21,6 +20,7 @@ import type { Feedback } from "@/types/conversation"
 import { getCall } from "@/services/call"
 import { FeedbackBadge } from "../FeedbackBadge/FeedbackBage"
 import { SentimentBadge } from "../SentimentBadge/SentimentBadge"
+import type { Call } from "@/types/call"
 
 
 export function CallModal() {
@@ -29,7 +29,7 @@ export function CallModal() {
   const callId = useSearch({ from: '/', select: (search) => search.call_id })
   const { data, isLoading } = useQuery({ queryKey: ['call', callId], queryFn: () => getCall(callId), enabled: !!callId })
   const isPlayingAudio = currentAudio?.call_id === callId
-  const ids = getIdsFromTranscript(data?.transcript_object as Retell.Call.WebCallResponse.TranscriptObject[])
+  const ids = getIdsFromTranscript(data?.transcript_object as Call.WebCallResponse.TranscriptObject[])
 
   const onCloseModal = useCallback((isOpen: boolean) => {
     if (!isOpen)

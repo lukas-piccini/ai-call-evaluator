@@ -19,11 +19,11 @@ import Skeleton from "react-loading-skeleton"
 
 import { columns } from "./Columns"
 import { useMemo, useState } from "react"
-import type Retell from "retell-sdk"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import type { Call } from "@/types/call"
 
-export function CallTable({ isLoading, data }: { isLoading: boolean, data: Retell.Call.CallResponse[] }) {
+export function CallTable({ isLoading, data }: { isLoading: boolean, data: Call.CallResponse[] }) {
   // eslint-disable-next-line
   const [globalFilter, setGlobalFilter] = useState<any>([])
   const finalData = useMemo(() => {

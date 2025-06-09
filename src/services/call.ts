@@ -1,21 +1,21 @@
 import type { Feedback } from "@/types/conversation"
-import { Retell } from "retell-sdk"
+import type { Call } from "@/types/call"
 
-export async function getCalls(): Promise<Retell.Call.CallResponse[]> {
+export async function getCalls(): Promise<Call.CallResponse[]> {
   return await new Promise((resolve) => {
     setTimeout(async () => {
       const response = await fetch(`${import.meta.env.VITE_CALLS_API_URL}`)
-      const calls: Retell.Call.CallResponse[] = await response.json()
+      const calls: Call.CallResponse[] = await response.json()
       resolve(calls)
     }, 2000)
   })
 }
 
-export async function getCall(callId: string): Promise<Retell.Call.CallResponse> {
+export async function getCall(callId: string): Promise<Call.CallResponse> {
   return await new Promise((resolve) => {
     setTimeout(async () => {
       const response = await fetch(`${import.meta.env.VITE_CALLS_API_URL}?call_id=${callId}`)
-      const calls: Retell.Call.CallResponse[] = await response.json()
+      const calls: Call.CallResponse[] = await response.json()
 
       if (calls.length >= 1)
         resolve(calls[0])
@@ -23,7 +23,7 @@ export async function getCall(callId: string): Promise<Retell.Call.CallResponse>
   })
 }
 
-export async function updateCall(callId: string, data: Feedback, messageId: string, metadata: Record<string, Feedback>): Promise<Retell.Call.CallResponse> {
+export async function updateCall(callId: string, data: Feedback, messageId: string, metadata: Record<string, Feedback>): Promise<Call.CallResponse> {
   return await new Promise((resolve, reject) => {
     setTimeout(async () => {
       try {
@@ -34,7 +34,7 @@ export async function updateCall(callId: string, data: Feedback, messageId: stri
           },
           body: JSON.stringify({ metadata: { ...metadata, [messageId]: data } })
         })
-        const call: Retell.Call.CallResponse = await response.json()
+        const call: Call.CallResponse = await response.json()
 
         if (!response.ok) {
           reject()

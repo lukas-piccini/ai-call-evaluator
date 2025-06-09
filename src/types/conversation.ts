@@ -1,14 +1,14 @@
-import { Retell } from "retell-sdk"
+import type { WebCallResponse, CallResponse } from "./call";
 
 export interface ConversationProps {
-  content?: Retell.CallResponse;
+  content?: CallResponse;
   isLoading: boolean;
   startDate: number;
 }
 
 export interface ConversationMessageProps {
   metadata: unknown;
-  message: Retell.WebCallResponse.TranscriptObject;
+  message: WebCallResponse.TranscriptObject;
   startDate: number;
 }
 
