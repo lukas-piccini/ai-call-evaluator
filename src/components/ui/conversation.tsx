@@ -47,8 +47,6 @@ function ConversationFeedbackForm({ metadata }: ConversationFeedbackFormProps) {
 
   const feedback = getFeedbackForCurrentMessage(metadata, selectedMessage)
 
-  console.log(feedback)
-
   const form = useForm<z.infer<typeof FeedbackFormSchema>>({
     resolver: zodResolver(FeedbackFormSchema),
     defaultValues: {
@@ -66,7 +64,8 @@ function ConversationFeedbackForm({ metadata }: ConversationFeedbackFormProps) {
     onSuccess: () => {
       toast.success("Feedback sent successfully")
       queryClient.invalidateQueries({ queryKey: ["call", callId] })
-      navigate({ to: "/", search: (old) => ({ ...old, selected_message: undefined }), replace: true })
+      queryClient.invalidateQueries({ queryKey: ["calls"] })
+      navigate({ to: "/", search: (old) => ({ ...old, selected_message: undefined }), replace: true, resetScroll: false })
     },
     onError: () => {
       toast.error("Error sending your feedback. Try again later.")
@@ -158,7 +157,7 @@ function ConversationMessage({ message, startDate, metadata }: ConversationMessa
         return
     }
 
-    navigate({ to: "/", search: (old) => ({ ...old, selected_message: newSelectedMessage }), replace: true })
+    navigate({ to: "/", search: (old) => ({ ...old, selected_message: newSelectedMessage }), replace: true, resetScroll: false })
   }, [navigate, isSelected, dirty])
 
   useEffect(() => {

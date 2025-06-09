@@ -27,10 +27,15 @@ export function getFeedbackForCurrentMessage(metadata: Record<string, Feedback> 
   return result?.[1]
 }
 
-export function getFeedbackStatus(ids: number[], metadata: Feedback[] | undefined): string {
-  if (metadata && (metadata.length > 0 && metadata.length < ids.length)) return FeedbackStatus.PENDING
-  if ((!metadata && ids.length > 0) || ids.length > 0 && metadata?.length === 0) return FeedbackStatus.NOT_STARTED
-  if (!metadata || (metadata.length === 0 && ids.length === 0)) return FeedbackStatus.COMPLETED
+export function getFeedbackStatus(ids: number[], metadata: Record<string, Feedback[]> | undefined): FeedbackStatus {
+  const metadataLength = Object.keys(metadata || {}).length
+
+  if (metadata && (metadataLength > 0 && metadataLength < ids.length)) return FeedbackStatus.PENDING
+  if ((!metadata && ids.length > 0) || ids.length > 0 && metadataLength === 0) return FeedbackStatus.NOT_STARTED
+  if (!metadata || (metadataLength === 0 && ids.length === 0)) return FeedbackStatus.COMPLETED
+
+  if (metadata && metadataLength > 0 && ids && ids.length > 0 && Object.keys(metadata).every((key) => ids.includes(+key)))
+    return FeedbackStatus.COMPLETED
 
   return FeedbackStatus.PENDING
 }

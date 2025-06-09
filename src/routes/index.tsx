@@ -22,7 +22,7 @@ export const Route = createFileRoute('/')({
 
 
 function HomeComponent() {
-  const { data, isError, isLoading } = useQuery({ queryKey: ['calls'], queryFn: getCalls })
+  const { data, isError, isLoading } = useQuery({ queryKey: ['calls'], queryFn: getCalls, refetchInterval: 1000 * 60 })
 
   console.log(data, isError)
 

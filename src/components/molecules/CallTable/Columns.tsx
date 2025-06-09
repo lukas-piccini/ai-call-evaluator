@@ -2,6 +2,10 @@ import type { ColumnDef } from "@tanstack/react-table";
 import { Actions } from "@/components/ui/actions";
 import type Retell from "retell-sdk";
 import { msToDuration, unixToTimestamp } from "@/lib/formatters";
+import { SentimentBadge } from "../SentimentBadge/SentimentBadge";
+import { FeedbackBadge } from "../FeedbackBadge/FeedbackBage";
+import type { Feedback } from "@/types/conversation";
+import { getFeedbackStatus, getIdsFromTranscript } from "@/lib/utils";
 
 export const columns: ColumnDef<Retell.Call.CallResponse>[] = [
   {
@@ -17,7 +21,10 @@ export const columns: ColumnDef<Retell.Call.CallResponse>[] = [
   },
   {
     accessorKey: "call_analysis.user_sentiment",
-    header: () => <span className="font-bold">Sentiment</span>
+    header: () => <span className="font-bold">Sentiment</span>,
+    cell: ({ row }) => {
+      return <SentimentBadge sentiment={row.original.call_analysis?.user_sentiment || "Unknown"} />
+    }
   },
   {
     accessorKey: "duration_ms",
@@ -28,7 +35,11 @@ export const columns: ColumnDef<Retell.Call.CallResponse>[] = [
   },
   {
     accessorKey: "feedback",
-    header: () => <span className="font-bold">Feedback Status</span>
+    header: () => <span className="font-bold">Feedback Status</span>,
+    cell: ({ row }) => {
+      const ids = getIdsFromTranscript(row.original?.transcript_object as Retell.Call.WebCallResponse.TranscriptObject[])
+      return <FeedbackBadge feedback={getFeedbackStatus(ids, row.original.metadata as Record<string, Feedback[]> | undefined)} />
+    }
   },
   {
     accessorKey: "Actions",

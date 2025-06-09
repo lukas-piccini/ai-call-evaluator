@@ -56,12 +56,12 @@ export function CallTable({ isLoading, data }: { isLoading: boolean, data: Retel
 
   return (
     <div className="flex flex-col flex-1 basis-auto gap-2 overflow-auto">
-      <div className="flex justify-between">
+      <div className="sm:flex sm:justify-between">
         <div>
           <p className="text-2xl font-bold">Call History</p>
           <p className="text-sm italic">A list of all recent calls</p>
         </div>
-        <div className="flex items-end">
+        <div className="sm:flex md:items-end">
           <Input
             placeholder="Search calls"
             value={globalFilter}

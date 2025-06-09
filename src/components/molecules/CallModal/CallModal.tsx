@@ -16,23 +16,24 @@ import { useAudioStore } from "@/stores/audio"
 import Skeleton from "react-loading-skeleton"
 import { Conversation } from "@/components/ui/conversation"
 import { Separator } from "@/components/ui/separator"
-import { Badge } from "@/components/ui/badge"
 import { getFeedbackStatus, getIdsFromTranscript } from "@/lib/utils"
 import type { Feedback } from "@/types/conversation"
 import { getCall } from "@/services/call"
+import { FeedbackBadge } from "../FeedbackBadge/FeedbackBage"
+import { SentimentBadge } from "../SentimentBadge/SentimentBadge"
 
 
 export function CallModal() {
   const navigate = useNavigate()
   const { currentAudio, setCurrentAudio } = useAudioStore(state => state)
   const callId = useSearch({ from: '/', select: (search) => search.call_id })
-  const { data, isError, isLoading } = useQuery({ queryKey: ['call', callId], queryFn: () => getCall(callId), enabled: !!callId })
+  const { data, isLoading } = useQuery({ queryKey: ['call', callId], queryFn: () => getCall(callId), enabled: !!callId })
   const isPlayingAudio = currentAudio?.call_id === callId
   const ids = getIdsFromTranscript(data?.transcript_object as Retell.Call.WebCallResponse.TranscriptObject[])
 
   const onCloseModal = useCallback((isOpen: boolean) => {
     if (!isOpen)
-      navigate({ to: '/' })
+      navigate({ to: '/', resetScroll: false })
   }, [navigate])
 
   const onPlayAudio = useCallback(() => {
@@ -57,12 +58,12 @@ export function CallModal() {
             <div className="flex gap-4">
               <div className="flex items-center gap-2">
                 <span className="text-sm italic text-gray-500 dark:text-white">Sentiment:</span>
-                <Badge asChild={isLoading}>{isLoading ? <Skeleton width={50} height={15} /> : data?.call_analysis?.user_sentiment}</Badge>
+                {isLoading ? <Skeleton width={50} height={15} /> : <SentimentBadge sentiment={data?.call_analysis?.user_sentiment || "Unknown"} />}
               </div>
 
               <div className="flex items-center gap-2">
                 <span className="text-sm italic text-gray-500 dark:text-white">Status:</span>
-                <Badge asChild={isLoading}>{isLoading ? <Skeleton width={50} height={15} /> : getFeedbackStatus(ids, data?.metadata as Feedback[] | undefined)}</Badge>
+                {isLoading ? <Skeleton width={50} height={15} /> : <FeedbackBadge feedback={getFeedbackStatus(ids, data?.metadata as Feedback[] | undefined)} />}
               </div>
             </div>
           </div>

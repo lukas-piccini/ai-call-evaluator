@@ -3760,9 +3760,11 @@ function createCall() {
 
 module.exports = () => {
   const data = {
-    calls: faker.helpers.multiple(createCall, {
-      count: 100,
-    }),
+    calls: faker.helpers
+      .multiple(createCall, {
+        count: 100,
+      })
+      .sort((a, b) => (a.end_timestamp > b.end_timestamp ? -1 : 1)),
   };
 
   return data;
