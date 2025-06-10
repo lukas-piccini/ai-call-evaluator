@@ -22,9 +22,7 @@ export const Route = createFileRoute('/')({
 
 
 function HomeComponent() {
-  const { data, isError, isLoading } = useQuery({ queryKey: ['calls'], queryFn: getCalls, refetchInterval: 1000 * 60 })
-
-  console.log(data, isError)
+  const { data, isLoading } = useQuery({ queryKey: ['calls'], queryFn: getCalls, refetchInterval: 1000 * 60 })
 
   return (
     <div className="flex flex-col py-8 px-4 md:px-10 gap-8">

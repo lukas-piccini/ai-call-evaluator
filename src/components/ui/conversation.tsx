@@ -92,7 +92,6 @@ function ConversationFeedbackForm({ metadata }: ConversationFeedbackFormProps) {
   function onSubmit(data: z.infer<typeof FeedbackFormSchema>) {
     if (!hasChanged) return;
 
-    console.log(data)
     mutate({ data })
   }
 

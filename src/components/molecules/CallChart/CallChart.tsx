@@ -12,7 +12,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 import type { CallResponse } from "@/types/call"
-import { getChartData, getLast24HoursCalls, getSentimentAnalytics } from "@/lib/aggregator"
+import { getChartData, getLast24HoursCalls, getPrevDayCalls, getSentimentAnalytics } from "@/lib/aggregator"
 import { CallSentimentCard } from "../CallSentimentCard/CallSentimentCard"
 import { ChartSpline, Clock, Timer } from "lucide-react"
 import { useMemo } from "react"
@@ -42,16 +42,15 @@ interface CallChartProps {
 
 export function CallChart({ data, isLoading }: CallChartProps) {
   const last24hCalls = useMemo(() => getLast24HoursCalls(data), [data])
-  const analytics = useMemo(() => getSentimentAnalytics(last24hCalls), [last24hCalls])
+  const prevDayCalls = useMemo(() => getPrevDayCalls(data), [data])
+  const analytics = useMemo(() => getSentimentAnalytics(last24hCalls, prevDayCalls), [last24hCalls, prevDayCalls])
   const chartData = useMemo(() => getChartData(last24hCalls), [last24hCalls])
-
-  console.log("last", last24hCalls)
 
   return (
     <section className="flex flex-col flex-1 gap-2">
       <div>
         <p className="text-2xl font-bold">Sentiment Trends</p>
-        <p className="text-sm italic">Hourly sentiment analysis across all calls</p>
+        <p className="text-sm italic">Hourly sentiment analysis across calls from the last 24 hours.</p>
       </div>
       <Card>
         <CardContent>
@@ -60,23 +59,25 @@ export function CallChart({ data, isLoading }: CallChartProps) {
               isLoading={isLoading}
               title="Avg Call Duration"
               icon={<Clock size={16} />}
-              value={`${analytics.avgCallDuration} min`}
-              difference="+20"
+              value={`${analytics.callDuration.avg} min`}
+              difference={`${analytics.callDuration.diff} min`}
+              outlier={analytics.callDuration.outliers}
             />
             <CallSentimentCard
               isLoading={isLoading}
               title="Agent Latency"
               icon={<Timer size={16} />}
-              value={`${analytics.avgLatency}s`}
-              difference="+20"
+              value={`${analytics.latency.avg}s`}
+              difference={`${analytics.latency.diff}s`}
+              outlier={analytics.latency.outliers}
             />
 
             <CallSentimentCard
               isLoading={isLoading}
               title="Sentiment Score"
               icon={<ChartSpline size={16} />}
-              value={`${analytics.sentimentScore}/10`}
-              difference="+20"
+              value={`${analytics.sentimentScore.avg}/10`}
+              difference={analytics.sentimentScore.diff}
             />
           </div>
 
