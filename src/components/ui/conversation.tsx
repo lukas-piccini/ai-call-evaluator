@@ -27,6 +27,7 @@ import { updateCall } from "@/services/call";
 import { toast } from "sonner";
 import { LoaderIcon } from "lucide-react";
 import { getFeedbackForCurrentMessage } from "@/lib/utils";
+import { FeedbackTag } from "@/components/molecules/FeedbackTag/FeedbackTag";
 
 const FeedbackFormSchema = z.object({
   comment: z.string({
@@ -125,6 +126,19 @@ function ConversationFeedbackForm({ metadata }: ConversationFeedbackFormProps) {
               <FormItem >
                 <FormControl>
                   <Textarea placeholder="Write your review here..." {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="tags"
+            render={({ field }) => (
+              <FormItem >
+                <FormControl>
+                  <FeedbackTag {...field} value={field.value || []} onChange={field.onChange} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
